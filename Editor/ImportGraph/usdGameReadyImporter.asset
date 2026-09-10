@@ -1,0 +1,4913 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9e89a354fbfd44fa60bdb3edfd7d45, type: 3}
+  m_Name: usdGameReadyImporter
+  m_EditorClassIdentifier: 
+  m_Nodes:
+  - rid: 4800488168154203076
+  - rid: 4800488168154203077
+  - rid: 4800488168154203078
+  - rid: 4800488168154203079
+  - rid: 4800488168154203080
+  - rid: 4800488168154203081
+  - rid: 4800488168154203082
+  - rid: 4800488168154203083
+  - rid: 4800488168154203084
+  - rid: 4800488168154203085
+  - rid: 4800488168154203086
+  - rid: 4800488168154203087
+  - rid: 4800488168154203088
+  - rid: 4800488168154203089
+  - rid: 4800488168154203090
+  - rid: 4800488168154203091
+  - rid: 4800488168154203092
+  - rid: 4800488168154203093
+  - rid: 4800488168154203094
+  - rid: 4800488168154203095
+  - rid: 4800488168154203096
+  - rid: 4800488168154203097
+  - rid: 4800488168154203098
+  - rid: 4800488168154203099
+  - rid: 4800488168154203100
+  - rid: 4800488168154203101
+  - rid: 4800488168154203102
+  - rid: 4800488168154203103
+  - rid: 4800488168154203104
+  - rid: 4800488168154203105
+  - rid: 4800488168154203106
+  - rid: 4800488168154203107
+  - rid: 4800488168154203108
+  - rid: 4800488168154203109
+  - rid: 4800488168154203110
+  - rid: 4800488168154203111
+  - rid: 4800488168154203112
+  - rid: 4800488168154203113
+  - rid: 4800488168154203114
+  - rid: 4800488168154203115
+  - rid: 4800488168154203116
+  - rid: 4800488168154203117
+  - rid: 4800488168154203118
+  - rid: 4800488168154203119
+  - rid: 4800488168154203120
+  - rid: 4800488168154203121
+  - rid: 4800488168154203122
+  - rid: 4800488168154203123
+  - rid: 4800488168154203124
+  - rid: 4800488168154203125
+  - rid: 4800488168154203126
+  - rid: 4800488168154203127
+  - rid: 4800488168154203128
+  - rid: 4800488168154203129
+  - rid: 4800488168154203130
+  - rid: 4800488168154203131
+  - rid: 4800488168154203132
+  - rid: 4800488168154203133
+  - rid: 4800488168154203134
+  - rid: 4800488168154203135
+  - rid: 4800488168235728896
+  - rid: 4800488168235728897
+  - rid: 4800488168235728898
+  - rid: 4800488168235728899
+  - rid: 4800488168235728900
+  - rid: 4800488168235728901
+  - rid: 4800488168235728902
+  - rid: 4800488168235728903
+  - rid: 4800488168235728904
+  - rid: 4800488168235728905
+  - rid: 4800488168235728906
+  - rid: 4800488168235728907
+  - rid: 4800488168235728908
+  - rid: 4800488168235728909
+  - rid: 4800488168235728910
+  - rid: 4800488168235728911
+  - rid: 4800488168235728912
+  - rid: 4800488168235728913
+  - rid: 4800488168235728914
+  - rid: 4800488168235728915
+  - rid: 4800488168235728916
+  - rid: 4800488168235728917
+  - rid: 4800488168235728918
+  - rid: 4800488168235728919
+  - rid: 4800488168235728920
+  - rid: 4800488168235728921
+  - rid: 4800488168235728922
+  - rid: 4800488168235728923
+  - rid: 4800488168235728924
+  - rid: 4800488168235728925
+  - rid: 4800488168235728926
+  - rid: 4800488168235728927
+  - rid: 4800488168235728928
+  - rid: 4800488168235728929
+  - rid: 4800488168235728930
+  - rid: 4800488168235728931
+  - rid: 4800488168235728932
+  - rid: 4800488168235728933
+  - rid: 4800488168235728934
+  - rid: 4800488168235728935
+  - rid: 4800488168235728936
+  - rid: 4800488168235728937
+  - rid: 4800488168235728938
+  - rid: 4800488168235728939
+  - rid: 4800488168235728940
+  - rid: 4800488168235728941
+  - rid: 4800488168235728942
+  - rid: 4800488168235728943
+  - rid: 4800488168235728944
+  - rid: 4800488168235728945
+  - rid: 4800488168235728946
+  - rid: 4800488168235728947
+  - rid: 4800488168235728948
+  - rid: 4800488168235728949
+  - rid: 4800488168235728950
+  - rid: 4800488168235728951
+  - rid: 4800488168235728952
+  - rid: 4800488168235728953
+  - rid: 5112242216869560320
+  - rid: 5112242216869560321
+  m_Edges:
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168154203077
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168154203079
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168154203078
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168154203079
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168154203079
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203080
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203080
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203080
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203081
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168154203083
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168154203082
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168154203083
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168154203085
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168154203084
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168154203085
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203086
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168154203085
+    destination:
+      targetedPortSet: 0
+      fieldName: skeletonPrims
+      node:
+        rid: 4800488168154203086
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168154203083
+    destination:
+      targetedPortSet: 0
+      fieldName: blendShapes
+      node:
+        rid: 4800488168154203086
+  - origin:
+      targetedPortSet: 1
+      fieldName: skinlessSkeletons
+      node:
+        rid: 4800488168235728950
+    destination:
+      targetedPortSet: 0
+      fieldName: skinlessSkeletons
+      node:
+        rid: 4800488168154203086
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203087
+  - origin:
+      targetedPortSet: 1
+      fieldName: skeletonRootPrims
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203087
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203087
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203088
+  - origin:
+      targetedPortSet: 1
+      fieldName: rigDescriptions
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: rigDescriptions
+      node:
+        rid: 4800488168154203089
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203089
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203089
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203090
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203090
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_0
+      node:
+        rid: 4800488168154203091
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203088
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_1
+      node:
+        rid: 4800488168154203091
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168154203093
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168154203092
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168154203093
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168154203093
+    destination:
+      targetedPortSet: 0
+      fieldName: meshPrims
+      node:
+        rid: 4800488168154203094
+  - origin:
+      targetedPortSet: 1
+      fieldName: skinnedMeshData
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: skinnedMeshData
+      node:
+        rid: 4800488168154203094
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdSkelBlendShapes
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: usdSkelBlendShapes
+      node:
+        rid: 4800488168154203094
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168154203093
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203095
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168154203095
+  - origin:
+      targetedPortSet: 1
+      fieldName: displayColorMaterialDescriptions
+      node:
+        rid: 4800488168154203095
+    destination:
+      targetedPortSet: 0
+      fieldName: displayColorMaterialDescriptions
+      node:
+        rid: 4800488168154203096
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168154203093
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203097
+  - origin:
+      targetedPortSet: 1
+      fieldName: defaultMeshPrim
+      node:
+        rid: 4800488168154203094
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203098
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: UsdMetadata
+      node:
+        rid: 4800488168154203099
+  - origin:
+      targetedPortSet: 1
+      fieldName: defaultMeshPrim
+      node:
+        rid: 4800488168154203094
+    destination:
+      targetedPortSet: 0
+      fieldName: UsdMeshes
+      node:
+        rid: 4800488168154203099
+  - origin:
+      targetedPortSet: 1
+      fieldName: PathToMeshDescription
+      node:
+        rid: 4800488168154203099
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToMeshDescription
+      node:
+        rid: 4800488168154203100
+  - origin:
+      targetedPortSet: 1
+      fieldName: pathToMeshDescription
+      node:
+        rid: 4800488168154203100
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToMeshDescription
+      node:
+        rid: 4800488168154203101
+  - origin:
+      targetedPortSet: 1
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203101
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203102
+  - origin:
+      targetedPortSet: 1
+      fieldName: defaultMeshPrim
+      node:
+        rid: 4800488168154203094
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203103
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203103
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203103
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203104
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203104
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203105
+  - origin:
+      targetedPortSet: 1
+      fieldName: objsToRefs
+      node:
+        rid: 4800488168154203098
+    destination:
+      targetedPortSet: 0
+      fieldName: objsToRefs
+      node:
+        rid: 4800488168154203105
+  - origin:
+      targetedPortSet: 1
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203102
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203105
+  - origin:
+      targetedPortSet: 1
+      fieldName: invisiblePaths
+      node:
+        rid: 4800488168154203097
+    destination:
+      targetedPortSet: 0
+      fieldName: invisiblePaths
+      node:
+        rid: 4800488168154203105
+  - origin:
+      targetedPortSet: 1
+      fieldName: skinnedMeshPrim
+      node:
+        rid: 4800488168154203094
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203106
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdSkelBlendShapes
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: UsdSkelBlendShapes
+      node:
+        rid: 4800488168154203107
+  - origin:
+      targetedPortSet: 1
+      fieldName: skinnedMeshData
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: SkinnedMeshData
+      node:
+        rid: 4800488168154203107
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203107
+  - origin:
+      targetedPortSet: 1
+      fieldName: skinnedMeshPrim
+      node:
+        rid: 4800488168154203094
+    destination:
+      targetedPortSet: 0
+      fieldName: UsdMeshes
+      node:
+        rid: 4800488168154203107
+  - origin:
+      targetedPortSet: 1
+      fieldName: PathToMeshDescription
+      node:
+        rid: 4800488168154203107
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToMeshDescription
+      node:
+        rid: 4800488168154203108
+  - origin:
+      targetedPortSet: 1
+      fieldName: pathToMeshDescription
+      node:
+        rid: 4800488168154203108
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToMeshDescription
+      node:
+        rid: 4800488168154203109
+  - origin:
+      targetedPortSet: 1
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203109
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203110
+  - origin:
+      targetedPortSet: 1
+      fieldName: skinnedMeshPrim
+      node:
+        rid: 4800488168154203094
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168154203111
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203111
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203111
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168154203112
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203112
+    destination:
+      targetedPortSet: 0
+      fieldName: meshGameObjects
+      node:
+        rid: 4800488168154203113
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168154203091
+    destination:
+      targetedPortSet: 0
+      fieldName: skeletonGameObjects
+      node:
+        rid: 4800488168154203113
+  - origin:
+      targetedPortSet: 1
+      fieldName: objsToRefs
+      node:
+        rid: 4800488168154203106
+    destination:
+      targetedPortSet: 0
+      fieldName: objsToRefs
+      node:
+        rid: 4800488168154203113
+  - origin:
+      targetedPortSet: 1
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203110
+    destination:
+      targetedPortSet: 0
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203113
+  - origin:
+      targetedPortSet: 1
+      fieldName: invisiblePaths
+      node:
+        rid: 4800488168154203097
+    destination:
+      targetedPortSet: 0
+      fieldName: invisiblePaths
+      node:
+        rid: 4800488168154203113
+  - origin:
+      targetedPortSet: 1
+      fieldName: skinnedMeshData
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: skinnedMeshData
+      node:
+        rid: 4800488168154203113
+  - origin:
+      targetedPortSet: 1
+      fieldName: rigDescriptions
+      node:
+        rid: 4800488168154203086
+    destination:
+      targetedPortSet: 0
+      fieldName: rigDescriptions
+      node:
+        rid: 4800488168154203113
+  - origin:
+      targetedPortSet: 1
+      fieldName: diffuseColorTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203125
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203114
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203125
+  - origin:
+      targetedPortSet: 1
+      fieldName: normalTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203126
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203115
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203126
+  - origin:
+      targetedPortSet: 1
+      fieldName: metallicTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203127
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203116
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203127
+  - origin:
+      targetedPortSet: 1
+      fieldName: roughnessTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203128
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203117
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203128
+  - origin:
+      targetedPortSet: 1
+      fieldName: emissiveColorTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203129
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203118
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203129
+  - origin:
+      targetedPortSet: 1
+      fieldName: opacityTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203130
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203119
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203130
+  - origin:
+      targetedPortSet: 1
+      fieldName: displacementTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203131
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203120
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203131
+  - origin:
+      targetedPortSet: 1
+      fieldName: specularColorTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203132
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203121
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203132
+  - origin:
+      targetedPortSet: 1
+      fieldName: occlusionTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203133
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203122
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203133
+  - origin:
+      targetedPortSet: 1
+      fieldName: clearCoatTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203134
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203123
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203134
+  - origin:
+      targetedPortSet: 1
+      fieldName: clearCoatRoughnessTextureSamplers
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSamplers
+      node:
+        rid: 4800488168154203135
+  - origin:
+      targetedPortSet: 1
+      fieldName: settings
+      node:
+        rid: 4800488168154203124
+    destination:
+      targetedPortSet: 0
+      fieldName: textureSettings
+      node:
+        rid: 4800488168154203135
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728897
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728896
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168235728897
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728897
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMaterials
+      node:
+        rid: 4800488168235728898
+  - origin:
+      targetedPortSet: 1
+      fieldName: materialDescriptions
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: materialDescriptions
+      node:
+        rid: 4800488168235728899
+  - origin:
+      targetedPortSet: 1
+      fieldName: materials
+      node:
+        rid: 4800488168235728899
+    destination:
+      targetedPortSet: 0
+      fieldName: materials
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203125
+    destination:
+      targetedPortSet: 0
+      fieldName: diffuseColorTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203126
+    destination:
+      targetedPortSet: 0
+      fieldName: normalTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203127
+    destination:
+      targetedPortSet: 0
+      fieldName: metallicTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203128
+    destination:
+      targetedPortSet: 0
+      fieldName: roughnessTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203129
+    destination:
+      targetedPortSet: 0
+      fieldName: emissiveColorTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203130
+    destination:
+      targetedPortSet: 0
+      fieldName: opacityTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203131
+    destination:
+      targetedPortSet: 0
+      fieldName: displacementTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203132
+    destination:
+      targetedPortSet: 0
+      fieldName: specularColorTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203133
+    destination:
+      targetedPortSet: 0
+      fieldName: occlusionTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203134
+    destination:
+      targetedPortSet: 0
+      fieldName: clearCoatTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: texturesBySamplerId
+      node:
+        rid: 4800488168154203135
+    destination:
+      targetedPortSet: 0
+      fieldName: clearCoatRoughnessTextures
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: materialDescriptions
+      node:
+        rid: 4800488168235728898
+    destination:
+      targetedPortSet: 0
+      fieldName: materialDescriptions
+      node:
+        rid: 4800488168235728900
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728902
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728901
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168235728902
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728902
+    destination:
+      targetedPortSet: 0
+      fieldName: usdCameras
+      node:
+        rid: 4800488168235728903
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728903
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728902
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168235728904
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728904
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728904
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728905
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728905
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728906
+  - origin:
+      targetedPortSet: 1
+      fieldName: cameras
+      node:
+        rid: 4800488168235728903
+    destination:
+      targetedPortSet: 0
+      fieldName: cameras
+      node:
+        rid: 4800488168235728906
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728906
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728908
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728907
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168235728908
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728908
+    destination:
+      targetedPortSet: 0
+      fieldName: usdDistantLights
+      node:
+        rid: 4800488168235728909
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728908
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168235728910
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728910
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728910
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728911
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728911
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728912
+  - origin:
+      targetedPortSet: 1
+      fieldName: distantLights
+      node:
+        rid: 4800488168235728909
+    destination:
+      targetedPortSet: 0
+      fieldName: distantLights
+      node:
+        rid: 4800488168235728912
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728912
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728914
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728913
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168235728914
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728914
+    destination:
+      targetedPortSet: 0
+      fieldName: usdSphereLights
+      node:
+        rid: 4800488168235728915
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728914
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168235728916
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728916
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728916
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728917
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728917
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728918
+  - origin:
+      targetedPortSet: 1
+      fieldName: sphereLights
+      node:
+        rid: 4800488168235728915
+    destination:
+      targetedPortSet: 0
+      fieldName: sphereLights
+      node:
+        rid: 4800488168235728918
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728918
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728920
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728919
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168235728920
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728920
+    destination:
+      targetedPortSet: 0
+      fieldName: usdRectLights
+      node:
+        rid: 4800488168235728921
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728920
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168235728922
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728922
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728922
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728923
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728923
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728924
+  - origin:
+      targetedPortSet: 1
+      fieldName: rectLights
+      node:
+        rid: 4800488168235728921
+    destination:
+      targetedPortSet: 0
+      fieldName: rectLights
+      node:
+        rid: 4800488168235728924
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728924
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728926
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728925
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168235728926
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728926
+    destination:
+      targetedPortSet: 0
+      fieldName: usdDiskLights
+      node:
+        rid: 4800488168235728927
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728926
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168235728928
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728928
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728928
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728929
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728929
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728930
+  - origin:
+      targetedPortSet: 1
+      fieldName: diskLights
+      node:
+        rid: 4800488168235728927
+    destination:
+      targetedPortSet: 0
+      fieldName: diskLights
+      node:
+        rid: 4800488168235728930
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728930
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203105
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_0
+      node:
+        rid: 4800488168235728931
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203113
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_1
+      node:
+        rid: 4800488168235728931
+  - origin:
+      targetedPortSet: 1
+      fieldName: materials
+      node:
+        rid: 4800488168235728900
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_0
+      node:
+        rid: 4800488168235728932
+  - origin:
+      targetedPortSet: 1
+      fieldName: materials
+      node:
+        rid: 4800488168154203096
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_1
+      node:
+        rid: 4800488168235728932
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168235728932
+    destination:
+      targetedPortSet: 0
+      fieldName: materials
+      node:
+        rid: 4800488168235728933
+  - origin:
+      targetedPortSet: 1
+      fieldName: meshMaterialsPaths
+      node:
+        rid: 4800488168154203095
+    destination:
+      targetedPortSet: 0
+      fieldName: meshMaterialsPaths
+      node:
+        rid: 4800488168235728933
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168235728931
+    destination:
+      targetedPortSet: 0
+      fieldName: meshGameobjects
+      node:
+        rid: 4800488168235728933
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168154203081
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_0
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: meshGameObjects
+      node:
+        rid: 4800488168235728933
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_1
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168154203091
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_2
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728906
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_3
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728912
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_4
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728918
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_5
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728924
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_6
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728930
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_7
+      node:
+        rid: 4800488168235728934
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728935
+    destination:
+      targetedPortSet: 0
+      fieldName: filterTfType
+      node:
+        rid: 4800488168235728936
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168235728934
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728936
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728936
+  - origin:
+      targetedPortSet: 1
+      fieldName: PrimOfTfType
+      node:
+        rid: 4800488168235728936
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168235728937
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728937
+  - origin:
+      targetedPortSet: 1
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728937
+    destination:
+      targetedPortSet: 0
+      fieldName: xFormableDescriptions
+      node:
+        rid: 4800488168235728938
+  - origin:
+      targetedPortSet: 1
+      fieldName: PrimOfNonTfType
+      node:
+        rid: 4800488168235728936
+    destination:
+      targetedPortSet: 0
+      fieldName: prims
+      node:
+        rid: 4800488168235728939
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728938
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_0
+      node:
+        rid: 4800488168235728940
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728939
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_1
+      node:
+        rid: 4800488168235728940
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168235728934
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_2
+      node:
+        rid: 4800488168235728940
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728941
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728942
+  - origin:
+      targetedPortSet: 1
+      fieldName: root
+      node:
+        rid: 4800488168235728941
+    destination:
+      targetedPortSet: 0
+      fieldName: root
+      node:
+        rid: 4800488168235728942
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728944
+  - origin:
+      targetedPortSet: 1
+      fieldName: tfType
+      node:
+        rid: 4800488168235728943
+    destination:
+      targetedPortSet: 0
+      fieldName: tfType
+      node:
+        rid: 4800488168235728944
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728944
+    destination:
+      targetedPortSet: 0
+      fieldName: geomXformables
+      node:
+        rid: 4800488168235728945
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728945
+  - origin:
+      targetedPortSet: 1
+      fieldName: animatedProperties
+      node:
+        rid: 4800488168235728948
+    destination:
+      targetedPortSet: 0
+      fieldName: animatedProperties
+      node:
+        rid: 4800488168235728946
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728946
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 4800488168235728949
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728949
+    destination:
+      targetedPortSet: 0
+      fieldName: primsWithSkelBindingAPI
+      node:
+        rid: 4800488168235728950
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168154203085
+    destination:
+      targetedPortSet: 0
+      fieldName: skelRoots
+      node:
+        rid: 4800488168235728950
+  - origin:
+      targetedPortSet: 1
+      fieldName: skelAnimToSkelSkeletons
+      node:
+        rid: 4800488168235728950
+    destination:
+      targetedPortSet: 0
+      fieldName: skelAnimToSkelSkeletons
+      node:
+        rid: 4800488168235728951
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728951
+  - origin:
+      targetedPortSet: 1
+      fieldName: skelAnimToSkelSkeletons
+      node:
+        rid: 4800488168235728950
+    destination:
+      targetedPortSet: 0
+      fieldName: skelAnimToSkelSkeletons
+      node:
+        rid: 4800488168235728952
+  - origin:
+      targetedPortSet: 1
+      fieldName: skelAnimToSkinningQueryData
+      node:
+        rid: 4800488168235728950
+    destination:
+      targetedPortSet: 0
+      fieldName: skelAnimToSkinningQueryData
+      node:
+        rid: 4800488168235728952
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728952
+  - origin:
+      targetedPortSet: 1
+      fieldName: animatedProperties
+      node:
+        rid: 4800488168235728945
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_0
+      node:
+        rid: 4800488168235728947
+  - origin:
+      targetedPortSet: 1
+      fieldName: animatedProperties
+      node:
+        rid: 4800488168235728951
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_1
+      node:
+        rid: 4800488168235728947
+  - origin:
+      targetedPortSet: 1
+      fieldName: animatedProperties
+      node:
+        rid: 4800488168235728953
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_2
+      node:
+        rid: 4800488168235728947
+  - origin:
+      targetedPortSet: 1
+      fieldName: animatedProperties
+      node:
+        rid: 4800488168235728952
+    destination:
+      targetedPortSet: 0
+      fieldName: inputs_3
+      node:
+        rid: 4800488168235728947
+  - origin:
+      targetedPortSet: 1
+      fieldName: root
+      node:
+        rid: 4800488168235728941
+    destination:
+      targetedPortSet: 0
+      fieldName: root
+      node:
+        rid: 4800488168235728948
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168235728947
+    destination:
+      targetedPortSet: 0
+      fieldName: animatedProperties
+      node:
+        rid: 4800488168235728948
+  - origin:
+      targetedPortSet: 1
+      fieldName: primList
+      node:
+        rid: 4800488168235728902
+    destination:
+      targetedPortSet: 0
+      fieldName: usdCameras
+      node:
+        rid: 4800488168235728953
+  - origin:
+      targetedPortSet: 1
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168154203077
+    destination:
+      targetedPortSet: 0
+      fieldName: usdMetadata
+      node:
+        rid: 4800488168235728953
+  - origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168235728940
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: stage
+      node:
+        rid: 4800488168154203076
+    destination:
+      targetedPortSet: 0
+      fieldName: stage
+      node:
+        rid: 5112242216869560320
+  - origin:
+      targetedPortSet: 1
+      fieldName: masses
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: masses
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: centersOfMass
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: centersOfMass
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: inertiaDiagonals
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: inertiaDiagonals
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: principalAxes
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: principalAxes
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: collisionPaths
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: collisionPaths
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: colliderShapes
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: colliderShapes
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: colliderBoxSizes
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: colliderBoxSizes
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: colliderRadii
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: colliderRadii
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: colliderCenters
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: colliderCenters
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: colliderRotations
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: colliderRotations
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: materials
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: materials
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: layers
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: layers
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointTypes
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointTypes
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointBody0
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointBody0
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointBody1
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointBody1
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointLocalPos0
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointLocalPos0
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointLocalPos1
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointLocalPos1
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointAxes
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointAxes
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointLimits
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointLimits
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: colliderCapsuleHeights
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: colliderCapsuleHeights
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: colliderCapsuleAxes
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: colliderCapsuleAxes
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointD6Specs
+      node:
+        rid: 5112242216869560320
+    destination:
+      targetedPortSet: 0
+      fieldName: jointD6Specs
+      node:
+        rid: 5112242216869560321
+  - origin:
+      targetedPortSet: 1
+      fieldName: gameObjects
+      node:
+        rid: 5112242216869560321
+    destination:
+      targetedPortSet: 0
+      fieldName: gameObjects
+      node:
+        rid: 4800488168235728941
+  m_ResultEdges:
+  - id: root
+    origin:
+      targetedPortSet: 1
+      fieldName: root
+      node:
+        rid: 4800488168235728942
+  - id: DiffuseColortexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203125
+  - id: NormaltexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203126
+  - id: MetallictexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203127
+  - id: RoughnesstexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203128
+  - id: EmissiveColortexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203129
+  - id: OpacitytexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203130
+  - id: DisplacementtexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203131
+  - id: SpecularColortexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203132
+  - id: OcclusiontexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203133
+  - id: ClearcoattexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203134
+  - id: ClearcoatRoughnesstexturesByPath
+    origin:
+      targetedPortSet: 1
+      fieldName: texturesByPath
+      node:
+        rid: 4800488168154203135
+  - id: materials
+    origin:
+      targetedPortSet: 1
+      fieldName: output
+      node:
+        rid: 4800488168235728932
+  - id: unityMeshes
+    origin:
+      targetedPortSet: 1
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203101
+  - id: unitySkinnedMeshes
+    origin:
+      targetedPortSet: 1
+      fieldName: pathToUnityMesh
+      node:
+        rid: 4800488168154203109
+  - id: clip
+    origin:
+      targetedPortSet: 1
+      fieldName: clip
+      node:
+        rid: 4800488168235728946
+  m_SettingEdges:
+  - id: Recalculate mesh normals
+    destination:
+      targetedPortSet: 0
+      fieldName: recalculateNormals
+      node:
+        rid: 4800488168154203102
+  - id: Recalculate mesh tangents
+    destination:
+      targetedPortSet: 0
+      fieldName: recalculateTangents
+      node:
+        rid: 4800488168154203102
+  - id: Recalculate mesh normals
+    destination:
+      targetedPortSet: 0
+      fieldName: recalculateNormals
+      node:
+        rid: 4800488168154203110
+  - id: Recalculate mesh tangents
+    destination:
+      targetedPortSet: 0
+      fieldName: recalculateTangents
+      node:
+        rid: 4800488168154203110
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203114
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203114
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203114
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203114
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203114
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203114
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203114
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203114
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203114
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203114
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203114
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203114
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203114
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203114
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203114
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203115
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203115
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203115
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203115
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203115
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203115
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203115
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203115
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203115
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203115
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203115
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203115
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203115
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203115
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203115
+  - id: Normal maps create from grayscale
+    destination:
+      targetedPortSet: 0
+      fieldName: createFromGrayScale
+      node:
+        rid: 4800488168154203115
+  - id: Normal maps flip green channel
+    destination:
+      targetedPortSet: 0
+      fieldName: flipGreenChannel
+      node:
+        rid: 4800488168154203115
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203116
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203116
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203116
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203116
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203116
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203116
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203116
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203116
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203116
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203116
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203116
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203116
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203116
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203116
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203116
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203117
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203117
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203117
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203117
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203117
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203117
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203117
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203117
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203117
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203117
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203117
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203117
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203117
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203117
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203117
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203118
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203118
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203118
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203118
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203118
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203118
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203118
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203118
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203118
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203118
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203118
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203118
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203118
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203118
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203118
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203119
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203119
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203119
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203119
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203119
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203119
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203119
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203119
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203119
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203119
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203119
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203119
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203119
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203119
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203119
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203120
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203120
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203120
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203120
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203120
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203120
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203120
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203120
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203120
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203120
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203120
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203120
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203120
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203120
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203120
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203121
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203121
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203121
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203121
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203121
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203121
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203121
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203121
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203121
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203121
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203121
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203121
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203121
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203121
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203121
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203122
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203122
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203122
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203122
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203122
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203122
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203122
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203122
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203122
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203122
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203122
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203122
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203122
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203122
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203122
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203123
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203123
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203123
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203123
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203123
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203123
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203123
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203123
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203123
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203123
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203123
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203123
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203123
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203123
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203123
+  - id: Textures alpha source
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaSource
+      node:
+        rid: 4800488168154203124
+  - id: Textures alpha is transparency
+    destination:
+      targetedPortSet: 0
+      fieldName: alphaIsTransparency
+      node:
+        rid: 4800488168154203124
+  - id: Textures NPOT scale
+    destination:
+      targetedPortSet: 0
+      fieldName: npotScale
+      node:
+        rid: 4800488168154203124
+  - id: Textures are readable
+    destination:
+      targetedPortSet: 0
+      fieldName: readable
+      node:
+        rid: 4800488168154203124
+  - id: Textures MipMap
+    destination:
+      targetedPortSet: 0
+      fieldName: mipMaps
+      node:
+        rid: 4800488168154203124
+  - id: Textures wrap mode
+    destination:
+      targetedPortSet: 0
+      fieldName: wrapMode
+      node:
+        rid: 4800488168154203124
+  - id: Textures filter mode
+    destination:
+      targetedPortSet: 0
+      fieldName: filterMode
+      node:
+        rid: 4800488168154203124
+  - id: Textures aniso level
+    destination:
+      targetedPortSet: 0
+      fieldName: anisoLevel
+      node:
+        rid: 4800488168154203124
+  - id: Textures max size
+    destination:
+      targetedPortSet: 0
+      fieldName: maxSize
+      node:
+        rid: 4800488168154203124
+  - id: Textures resize algorithm
+    destination:
+      targetedPortSet: 0
+      fieldName: resizeAlgorithm
+      node:
+        rid: 4800488168154203124
+  - id: Textures format
+    destination:
+      targetedPortSet: 0
+      fieldName: format
+      node:
+        rid: 4800488168154203124
+  - id: Textures compression
+    destination:
+      targetedPortSet: 0
+      fieldName: compression
+      node:
+        rid: 4800488168154203124
+  - id: Textures crunch compression
+    destination:
+      targetedPortSet: 0
+      fieldName: crunchedCompression
+      node:
+        rid: 4800488168154203124
+  - id: Textures Mip bias
+    destination:
+      targetedPortSet: 0
+      fieldName: mipmapBias
+      node:
+        rid: 4800488168154203124
+  - id: Textures (PNG) ignore gamma
+    destination:
+      targetedPortSet: 0
+      fieldName: ignorePNGGamma
+      node:
+        rid: 4800488168154203124
+  - id: Light intensity multiplier
+    destination:
+      targetedPortSet: 0
+      fieldName: lightIntensityMultiplier
+      node:
+        rid: 4800488168235728912
+  - id: Light intensity multiplier
+    destination:
+      targetedPortSet: 0
+      fieldName: lightIntensityMultiplier
+      node:
+        rid: 4800488168235728918
+  - id: Light intensity multiplier
+    destination:
+      targetedPortSet: 0
+      fieldName: lightIntensityMultiplier
+      node:
+        rid: 4800488168235728924
+  - id: Light intensity multiplier
+    destination:
+      targetedPortSet: 0
+      fieldName: lightIntensityMultiplier
+      node:
+        rid: 4800488168235728930
+  - id: Preserve scene root
+    destination:
+      targetedPortSet: 0
+      fieldName: preserveSceneRoot
+      node:
+        rid: 4800488168235728941
+  - id: Loop animations
+    destination:
+      targetedPortSet: 0
+      fieldName: loopAnimations
+      node:
+        rid: 4800488168235728946
+  - id: GR-Enable UsdPhysics
+    destination:
+      targetedPortSet: 0
+      fieldName: enabled
+      node:
+        rid: 5112242216869560321
+  m_ImportSettings:
+  - rid: 4800488168235728954
+  - rid: 4800488168235728955
+  - rid: 4800488168235728956
+  - rid: 4800488168235728957
+  - rid: 4800488168235728958
+  - rid: 4800488168235728959
+  - rid: 4800488168235728960
+  - rid: 4800488168235728961
+  - rid: 4800488168235728962
+  - rid: 4800488168235728963
+  - rid: 4800488168235728964
+  - rid: 4800488168235728965
+  - rid: 4800488168235728966
+  - rid: 4800488168235728967
+  - rid: 4800488168235728968
+  - rid: 4800488168235728969
+  - rid: 4800488168235728970
+  - rid: 4800488168235728971
+  - rid: 4800488168235728972
+  - rid: 4800488168235728973
+  - rid: 4800488168235728974
+  - rid: 4800488168235728975
+  - rid: 5112242216869560322
+  m_ImportConstants:
+  - rid: 4800488168235728976
+  - rid: 4800488168235728977
+  - rid: 4800488168235728978
+  - rid: 4800488168235728979
+  - rid: 4800488168235728980
+  - rid: 4800488168235728981
+  - rid: 4800488168235728982
+  - rid: 4800488168235728983
+  - rid: 4800488168235728984
+  - rid: 4800488168235728985
+  - rid: 4800488168235728986
+  - rid: 4800488168235728987
+  - rid: 4800488168235728988
+  - rid: 4800488168235728989
+  - rid: 4800488168235728990
+  - rid: 4800488168235728991
+  - rid: 4800488168235728992
+  - rid: 4800488168235728993
+  - rid: 4800488168235728994
+  - rid: 4800488168235728995
+  - rid: 4800488168235728996
+  - rid: 4800488168235728997
+  - rid: 4800488168235728998
+  - rid: 4800488168235728999
+  - rid: 4800488168235729000
+  - rid: 4800488168235729001
+  - rid: 4800488168235729002
+  - rid: 4800488168235729003
+  - rid: 4800488168235729004
+  - rid: 4800488168235729005
+  - rid: 4800488168235729006
+  - rid: 4800488168235729007
+  - rid: 4800488168235729008
+  - rid: 4800488168235729009
+  - rid: 4800488168235729010
+  - rid: 4800488168235729011
+  - rid: 4800488168235729012
+  - rid: 4800488168235729013
+  - rid: 4800488168235729014
+  - rid: 4800488168235729015
+  - rid: 4800488168235729016
+  - rid: 4800488168235729017
+  - rid: 4800488168235729018
+  - rid: 4800488168235729019
+  - rid: 4800488168235729020
+  - rid: 4800488168235729021
+  - rid: 4800488168235729022
+  - rid: 4800488168235729023
+  - rid: 4800488168235729024
+  - rid: 4800488168235729025
+  - rid: 4800488168235729026
+  - rid: 4800488168235729027
+  - rid: 4800488168235729028
+  - rid: 4800488168235729029
+  - rid: 4800488168235729030
+  - rid: 4800488168235729031
+  - rid: 4800488168235729032
+  - rid: 4800488168235729033
+  - rid: 4800488168235729034
+  - rid: 4800488168235729035
+  - rid: 4800488168235729036
+  - rid: 4800488168235729037
+  references:
+    version: 2
+    RefIds:
+    - rid: 4800488168154203076
+      type: {class: UsdStageOpenNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203077
+      type: {class: ExtractUsdStageMetadataNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203078
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203079
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203080
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203081
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203082
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203083
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203084
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203085
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203086
+      type: {class: ReadSkeletonRootNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203087
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203088
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203089
+      type: {class: ConvertSkeletonRigToXFormableNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203090
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203091
+      type: {class: 'IDictionaryAggregatorNode`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203092
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203093
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203094
+      type: {class: FilterMeshTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203095
+      type: {class: ReadMeshMaterialDescriptionNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203096
+      type: {class: CreateMaterialFromMeshColorNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203097
+      type: {class: ReadVisibilityNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203098
+      type: {class: ReadReferencesNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203099
+      type: {class: ReadMeshNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203100
+      type: {class: DuplicateVerticesRemovalNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203101
+      type: {class: WriteMeshNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203102
+      type: {class: ComputeNormalsAndTangentsNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203103
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203104
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203105
+      type: {class: AddMeshFilterToGameObjectsNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203106
+      type: {class: ReadReferencesNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203107
+      type: {class: ReadSkinnedMeshNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203108
+      type: {class: DuplicateVerticesRemovalNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203109
+      type: {class: WriteMeshNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203110
+      type: {class: ComputeNormalsAndTangentsNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203111
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203112
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203113
+      type: {class: AddSkinnedMeshRendererToGameObjectsNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203114
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203115
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203116
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203117
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203118
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203119
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203120
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203121
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203122
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203123
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203124
+      type: {class: CreateTextureGenerationSettingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203125
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203126
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203127
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203128
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203129
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203130
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203131
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203132
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203133
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203134
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168154203135
+      type: {class: CreateTextureNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728896
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728897
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728898
+      type: {class: ReadMaterialNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728899
+      type: {class: CreateMaterialNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728900
+      type: {class: MapTextureToMaterialNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728901
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728902
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728903
+      type: {class: ReadCameraNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728904
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728905
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728906
+      type: {class: CreateCameraNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728907
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728908
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728909
+      type: {class: ReadDistantLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728910
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728911
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728912
+      type: {class: CreateDistantLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728913
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728914
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728915
+      type: {class: ReadSphereLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728916
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728917
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728918
+      type: {class: CreateSphereLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728919
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728920
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728921
+      type: {class: ReadRectLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728922
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728923
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728924
+      type: {class: CreateRectLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728925
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728926
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728927
+      type: {class: ReadDiskLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728928
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728929
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728930
+      type: {class: CreateDiskLightNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728931
+      type: {class: 'IDictionaryAggregatorNode`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728932
+      type: {class: 'IDictionaryAggregatorNode`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.Material, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728933
+      type: {class: MapMaterialToMeshNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728934
+      type: {class: 'IDictionaryAggregatorNode`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728935
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728936
+      type: {class: FilterMissingHierarchyNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728937
+      type: {class: ReadXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728938
+      type: {class: CreateXFormNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728939
+      type: {class: CreateEmptyObjectsNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728940
+      type: {class: 'IDictionaryAggregatorNode`1[[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728941
+      type: {class: BuildHierarchyNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728942
+      type: {class: DisposeUsdImporterNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728943
+      type: {class: GetTfTypeByNameNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728944
+      type: {class: FilterStageByTfTypeNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728945
+      type: {class: ReadXFormAnimationNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728946
+      type: {class: CreateAnimationClipNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728947
+      type: {class: 'IDictionaryAggregatorNode`1[[System.Collections.Generic.Dictionary`2[[UnityEditor.EditorCurveBinding, UnityEditor.CoreModule],[UnityEngine.Keyframe[], UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728948
+      type: {class: TrimTransformPathNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728949
+      type: {class: FilterStageByAppliedSchemaNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728950
+      type: {class: ResolveSkelBindingsNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728951
+      type: {class: ReadJointXformAnimationNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728952
+      type: {class: ReadBlendShapeWeightAnimationNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728953
+      type: {class: ReadCameraAnimationNode, ns: UnityEditor.Importer.USD, asm: Unity.Importer.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 4800488168235728954
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Preserve scene root
+        value: 0
+    - rid: 4800488168235728955
+      type: {class: 'ImportSetting`1[[System.Single, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Light intensity multiplier
+        value: 1
+    - rid: 4800488168235728956
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Recalculate mesh normals
+        value: 0
+    - rid: 4800488168235728957
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Recalculate mesh tangents
+        value: 0
+    - rid: 4800488168235728958
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Loop animations
+        value: 0
+    - rid: 4800488168235728959
+      type: {class: 'ImportSetting`1[[UnityEditor.TextureImporterAlphaSource, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures alpha source
+        value: 0
+    - rid: 4800488168235728960
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures alpha is transparency
+        value: 0
+    - rid: 4800488168235728961
+      type: {class: 'ImportSetting`1[[UnityEditor.TextureImporterNPOTScale, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures NPOT scale
+        value: 0
+    - rid: 4800488168235728962
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures are readable
+        value: 0
+    - rid: 4800488168235728963
+      type: {class: 'ImportSetting`1[[UnityEditor.Importer.USD.MipMapSettings, Unity.Importer.USD.Editor]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures MipMap
+        value:
+          enabled: 1
+          mode: 0
+          fadeOut: 0
+          border: 0
+          preserveCoverage: 0
+          alphaCutoff: 0.5
+          fadeDistanceStart: 1
+          fadeDistanceEnd: 3
+          enableStreaming: 0
+          streamingPriority: 0
+          ignoreMipMapLimit: 0
+    - rid: 4800488168235728964
+      type: {class: 'ImportSetting`1[[UnityEditor.Importer.USD.TextureWrapModeSettings, Unity.Importer.USD.Editor]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures wrap mode
+        value:
+          u: 0
+          v: 0
+          w: 0
+    - rid: 4800488168235728965
+      type: {class: 'ImportSetting`1[[UnityEngine.FilterMode, UnityEngine.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures filter mode
+        value: 1
+    - rid: 4800488168235728966
+      type: {class: 'ImportSetting`1[[System.Int32, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures aniso level
+        value: 1
+    - rid: 4800488168235728967
+      type: {class: 'ImportSetting`1[[System.Int32, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures max size
+        value: 4096
+    - rid: 4800488168235728968
+      type: {class: 'ImportSetting`1[[UnityEditor.TextureResizeAlgorithm, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures resize algorithm
+        value: 1
+    - rid: 4800488168235728969
+      type: {class: 'ImportSetting`1[[UnityEditor.TextureImporterFormat, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures format
+        value: -1
+    - rid: 4800488168235728970
+      type: {class: 'ImportSetting`1[[UnityEditor.TextureImporterCompression, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures compression
+        value: 1
+    - rid: 4800488168235728971
+      type: {class: 'ImportSetting`1[[UnityEditor.Importer.USD.CrunchedCompression, Unity.Importer.USD.Editor]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures crunch compression
+        value:
+          useCrunchedCompression: 0
+          compressionQuality: 50
+    - rid: 4800488168235728972
+      type: {class: 'ImportSetting`1[[System.Single, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures Mip bias
+        value: 0
+    - rid: 4800488168235728973
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Textures (PNG) ignore gamma
+        value: 0
+    - rid: 4800488168235728974
+      type: {class: 'ImportSetting`1[[UnityEditor.Importer.USD.NormalMapFromGrayScale, Unity.Importer.USD.Editor]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Normal maps create from grayscale
+        value:
+          createFromGrayScale: 0
+          heightmapScale: 0.25
+          normalMapFilter: 0
+    - rid: 4800488168235728975
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: Normal maps flip green channel
+        value: 0
+    - rid: 4800488168235728976
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdGeomXform
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168154203078
+    - rid: 4800488168235728977
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdSkelBlendShape
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168154203082
+    - rid: 4800488168235728978
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdSkelRoot
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168154203084
+    - rid: 4800488168235728979
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdGeomMesh
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168154203092
+    - rid: 4800488168235728980
+      type: {class: 'ImportConstant`1[[UnityEngine.Shader, UnityEngine.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: {fileID: -6465566751694194690, guid: 38abd1adfdb150f4ca5e2f4cd52f1acc, type: 3}
+        destination:
+          targetedPortSet: 0
+          fieldName: usdPreviewSurfaceShader
+          node:
+            rid: 4800488168154203096
+    - rid: 4800488168235728981
+      type: {class: 'ImportConstant`1[[Unity.Importer.USD.PrimvarToVertexAttributeMapping, Unity.Importer.USD]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value:
+          Color:
+          - colorSet1
+          - vertexColor
+          TextCoord0:
+          - map1
+          - st
+          - st0
+          - UVMap
+          - Texture_uv
+          TextCoord1:
+          - map2
+          - st1
+          - uvSet
+          - UVMap_001
+          TextCoord2:
+          - map3
+          - st2
+          - uvSet1
+          - UVMap_002
+          TextCoord3:
+          - map4
+          - st3
+          - uvSet2
+          - UVMap_003
+          TextCoord4:
+          - map5
+          - st4
+          - uvSet3
+          - UVMap_004
+          TextCoord5:
+          - map6
+          - st5
+          - uvSet4
+          - UVMap_005
+          TextCoord6:
+          - map7
+          - st6
+          - uvSet5
+          - UVMap_006
+          TextCoord7:
+          - st7
+          - uvSet6
+          - UVMap_007
+        destination:
+          targetedPortSet: 0
+          fieldName: PrimVarMapping
+          node:
+            rid: 4800488168154203099
+    - rid: 4800488168235728982
+      type: {class: 'ImportConstant`1[[Unity.Importer.USD.PrimvarToVertexAttributeMapping, Unity.Importer.USD]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value:
+          Color:
+          - colorSet1
+          - vertexColor
+          TextCoord0:
+          - map1
+          - st
+          - st0
+          - UVMap
+          - Texture_uv
+          TextCoord1:
+          - map2
+          - st1
+          - uvSet
+          - UVMap_001
+          TextCoord2:
+          - map3
+          - st2
+          - uvSet1
+          - UVMap_002
+          TextCoord3:
+          - map4
+          - st3
+          - uvSet2
+          - UVMap_003
+          TextCoord4:
+          - map5
+          - st4
+          - uvSet3
+          - UVMap_004
+          TextCoord5:
+          - map6
+          - st5
+          - uvSet4
+          - UVMap_005
+          TextCoord6:
+          - map7
+          - st6
+          - uvSet5
+          - UVMap_006
+          TextCoord7:
+          - st7
+          - uvSet6
+          - UVMap_007
+        destination:
+          targetedPortSet: 0
+          fieldName: PrimVarMapping
+          node:
+            rid: 4800488168154203107
+    - rid: 4800488168235728983
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203114
+    - rid: 4800488168235728984
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203114
+    - rid: 4800488168235728985
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203114
+    - rid: 4800488168235728986
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203114
+    - rid: 4800488168235728987
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203115
+    - rid: 4800488168235728988
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203115
+    - rid: 4800488168235728989
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203115
+    - rid: 4800488168235728990
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203115
+    - rid: 4800488168235728991
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203116
+    - rid: 4800488168235728992
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203116
+    - rid: 4800488168235728993
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203116
+    - rid: 4800488168235728994
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203116
+    - rid: 4800488168235728995
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203117
+    - rid: 4800488168235728996
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203117
+    - rid: 4800488168235728997
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203117
+    - rid: 4800488168235728998
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203117
+    - rid: 4800488168235728999
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203118
+    - rid: 4800488168235729000
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203118
+    - rid: 4800488168235729001
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203118
+    - rid: 4800488168235729002
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203118
+    - rid: 4800488168235729003
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203119
+    - rid: 4800488168235729004
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203119
+    - rid: 4800488168235729005
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203119
+    - rid: 4800488168235729006
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203119
+    - rid: 4800488168235729007
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203120
+    - rid: 4800488168235729008
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203120
+    - rid: 4800488168235729009
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203120
+    - rid: 4800488168235729010
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203120
+    - rid: 4800488168235729011
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203121
+    - rid: 4800488168235729012
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203121
+    - rid: 4800488168235729013
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203121
+    - rid: 4800488168235729014
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203121
+    - rid: 4800488168235729015
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203122
+    - rid: 4800488168235729016
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203122
+    - rid: 4800488168235729017
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203122
+    - rid: 4800488168235729018
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203122
+    - rid: 4800488168235729019
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203123
+    - rid: 4800488168235729020
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203123
+    - rid: 4800488168235729021
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203123
+    - rid: 4800488168235729022
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203123
+    - rid: 4800488168235729023
+      type: {class: 'ImportConstant`1[[UnityEditor.TextureImporterType, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: textureType
+          node:
+            rid: 4800488168154203124
+    - rid: 4800488168235729024
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: sRGB
+          node:
+            rid: 4800488168154203124
+    - rid: 4800488168235729025
+      type: {class: 'ImportConstant`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 0
+        destination:
+          targetedPortSet: 0
+          fieldName: allowsAlphaSplitting
+          node:
+            rid: 4800488168154203124
+    - rid: 4800488168235729026
+      type: {class: 'ImportConstant`1[[UnityEditor.AndroidETC2FallbackOverride, UnityEditor.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: 1
+        destination:
+          targetedPortSet: 0
+          fieldName: androidETC2FallbackOverride
+          node:
+            rid: 4800488168154203124
+    - rid: 4800488168235729027
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdShadeMaterial
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728896
+    - rid: 4800488168235729028
+      type: {class: 'ImportConstant`1[[UnityEngine.Shader, UnityEngine.CoreModule]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: {fileID: -6465566751694194690, guid: 38abd1adfdb150f4ca5e2f4cd52f1acc, type: 3}
+        destination:
+          targetedPortSet: 0
+          fieldName: usdPreviewSurfaceShader
+          node:
+            rid: 4800488168235728899
+    - rid: 4800488168235729029
+      type: {class: 'ImportConstant`1[[Unity.Importer.USD.PrimvarToVertexAttributeMapping, Unity.Importer.USD]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value:
+          Color:
+          - colorSet1
+          - vertexColor
+          TextCoord0:
+          - map1
+          - st
+          - st0
+          - UVMap
+          - Texture_uv
+          TextCoord1:
+          - map2
+          - st1
+          - uvSet
+          - UVMap_001
+          TextCoord2:
+          - map3
+          - st2
+          - uvSet1
+          - UVMap_002
+          TextCoord3:
+          - map4
+          - st3
+          - uvSet2
+          - UVMap_003
+          TextCoord4:
+          - map5
+          - st4
+          - uvSet3
+          - UVMap_004
+          TextCoord5:
+          - map6
+          - st5
+          - uvSet4
+          - UVMap_005
+          TextCoord6:
+          - map7
+          - st6
+          - uvSet5
+          - UVMap_006
+          TextCoord7:
+          - st7
+          - uvSet6
+          - UVMap_007
+        destination:
+          targetedPortSet: 0
+          fieldName: primVarMapping
+          node:
+            rid: 4800488168235728899
+    - rid: 4800488168235729030
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdGeomCamera
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728901
+    - rid: 4800488168235729031
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdLuxDistantLight
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728907
+    - rid: 4800488168235729032
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdLuxSphereLight
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728913
+    - rid: 4800488168235729033
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdLuxRectLight
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728919
+    - rid: 4800488168235729034
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdLuxDiskLight
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728925
+    - rid: 4800488168235729035
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdGeomXformable
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728935
+    - rid: 4800488168235729036
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: UsdGeomXformable
+        destination:
+          targetedPortSet: 0
+          fieldName: tfTypeName
+          node:
+            rid: 4800488168235728943
+    - rid: 4800488168235729037
+      type: {class: 'ImportConstant`1[[System.String, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        value: SkelBindingAPI
+        destination:
+          targetedPortSet: 0
+          fieldName: schemaName
+          node:
+            rid: 4800488168235728949
+    - rid: 5112242216869560320
+      type: {class: FilterUsdPhysicsPrimsNode, ns: USDGameReady, asm: EGLab.GameReady.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 5112242216869560321
+      type: {class: CreateRigidbodyNode, ns: USDGameReady, asm: EGLab.GameReady.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 5112242216869560322
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: GR-Enable UsdPhysics
+        value: 1

@@ -1,0 +1,25 @@
+{
+  "name": "com.eglab.gameready.usd",
+  "version": "0.1.0",
+  "displayName": "GameReady USD Physics Importer",
+  "description": "Extends the Unity USD importer graph so UsdPhysics (mass, center of mass, inertia, colliders, physics materials, joints) becomes Rigidbody, Collider, PhysicsMaterial and ConfigurableJoint components at import time.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.importer.usd": "1.0.0-pre.2"
+  },
+  "author": {
+    "name": "Hongik EGLAB"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Erzyh/GameReady-USD-Physics-Importer.git"
+  },
+  "keywords": [
+    "usd",
+    "usdphysics",
+    "importer",
+    "physics",
+    "gameready"
+  ]
+}

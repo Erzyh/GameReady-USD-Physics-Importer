@@ -1,0 +1,25 @@
+{
+    "name": "EGLab.GameReady.USD.Editor",
+    "rootNamespace": "USDGameReady",
+    "references": [
+        "EGLab.GameReady.USD",
+        "Unity.Importer",
+        "Unity.Importer.Editor",
+        "Unity.Importer.USD",
+        "Unity.Importer.USD.Editor",
+        "Unity.USD.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "USD.NET.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
