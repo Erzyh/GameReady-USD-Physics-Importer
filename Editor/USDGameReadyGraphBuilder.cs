@@ -153,6 +153,22 @@ namespace USDGameReady.Editor
                 createRigidbodyNode, nameof(CreateRigidbodyNode.Input.jointD6Specs)));
 
             graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.jointDrives),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.jointDrives)));
+            graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.labelClasses),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.labelClasses)));
+            graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.labelTags),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.labelTags)));
+            graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.labelMatProps),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.labelMatProps)));
+            graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.labelSources),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.labelSources)));
+
+            graph.AddEdge(new Edge(
                 createRigidbodyNode, nameof(CreateRigidbodyNode.Output.gameObjects),
                 buildHierarchyNode,  nameof(BuildHierarchyNode.Input.gameObjects)));
 
@@ -161,6 +177,9 @@ namespace USDGameReady.Editor
 
             graph.AddSettingEdge(new SettingEdge(USDGameReadyImportSettings.EnableUsdPhysics,
                 createRigidbodyNode, nameof(CreateRigidbodyNode.Input.enabled)));
+            graph.AddImportSetting(new ImportSetting<bool>(USDGameReadyImportSettings.ExactJointLimits, true));
+            graph.AddSettingEdge(new SettingEdge(USDGameReadyImportSettings.ExactJointLimits,
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.exactLimits)));
 
             System.IO.Directory.CreateDirectory(k_OutputDir);
             AssetDatabase.CreateAsset(graph, k_OutputGraphPath);

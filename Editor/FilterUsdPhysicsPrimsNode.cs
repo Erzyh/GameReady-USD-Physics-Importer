@@ -8,7 +8,7 @@ namespace USDGameReady
     /// <summary>
     /// UsdPhysics(표준) 필터 — GameReady 왕복(Ours) 어댑터 v0.1.
     /// 강체(physics:mass), 충돌 프림(physics:collisionEnabled: Cube/Sphere analytic),
-    /// 마찰/반발 material, gameReady:layer 까지 읽는다.
+    /// 마찰/반발 material, gameReady:layer, 조인트 드라이브(스프링), GameReady 라벨까지 읽는다.
     /// 값은 USD 원 좌표계(RH) 그대로 — 좌표 변환은 Create 노드에서 일괄 적용.
     /// </summary>
     [System.Serializable]
@@ -45,6 +45,59 @@ namespace USDGameReady
             public Dictionary<string, Quaternion> colliderRotations = new();   // 콜라이더 로컬 회전
             public Dictionary<string, string> jointD6Specs = new();
             // "rotX:-30:10;rotY:...;transX:L;..." (L=locked)
+            public Dictionary<string, string> jointDrives = new();
+            // "rotY:k:c:t;transZ:k:c:t;" USD 원단위 그대로 (각: 강성과 감쇠는 /deg, 평형점은 deg)
+            public Dictionary<string, string> labelClasses = new();   // gameReady:label:class
+            public Dictionary<string, string> labelTags = new();      // gameReady:label:tags ('|' 구분)
+            public Dictionary<string, string> labelMatProps = new();  // gameReady:mat:* 중 true인 것 ('|' 구분)
+            public Dictionary<string, string> labelSources = new();   // gameReady:source
+        }
+
+        static readonly string[] k_Dofs = { "transX", "transY", "transZ", "rotX", "rotY", "rotZ" };
+
+        // PhysicsDriveAPI:<instance> 한 개를 "dof:k:c:t;" 로 읽는다 (없으면 빈 문자열)
+        static string ReadDrive(UsdPrim prim, string instance, string dof)
+        {
+            var kA = prim.GetAttribute(new TfToken($"drive:{instance}:physics:stiffness"));
+            var cA = prim.GetAttribute(new TfToken($"drive:{instance}:physics:damping"));
+            if (!(kA.IsValid() && kA.HasAuthoredValue()) && !(cA.IsValid() && cA.HasAuthoredValue()))
+                return "";
+            float k = 0, c = 0, t = 0;
+            if (kA.IsValid() && kA.HasAuthoredValue()) k = Vt.VtValueTofloat(kA.Get(UsdTimeCode.EarliestTime()));
+            if (cA.IsValid() && cA.HasAuthoredValue()) c = Vt.VtValueTofloat(cA.Get(UsdTimeCode.EarliestTime()));
+            var tA = prim.GetAttribute(new TfToken($"drive:{instance}:physics:targetPosition"));
+            if (tA.IsValid() && tA.HasAuthoredValue()) t = Vt.VtValueTofloat(tA.Get(UsdTimeCode.EarliestTime()));
+            var ic = System.Globalization.CultureInfo.InvariantCulture;
+            return $"{dof}:{k.ToString(ic)}:{c.ToString(ic)}:{t.ToString(ic)};";
+        }
+
+        static void ReadLabels(UsdPrim prim, string path, OutputPort o)
+        {
+            var clsA = prim.GetAttribute(new TfToken("gameReady:label:class"));
+            if (!(clsA.IsValid() && clsA.HasAuthoredValue())) return;
+            o.labelClasses[path] = Vt.VtValueToTfToken(clsA.Get(UsdTimeCode.EarliestTime())).GetString();
+            var tagA = prim.GetAttribute(new TfToken("gameReady:label:tags"));
+            if (tagA.IsValid() && tagA.HasAuthoredValue())
+            {
+                var va = Vt.VtValueToVtStringArray(tagA.Get(UsdTimeCode.EarliestTime()));
+                var arr = new List<string>();
+                for (int i = 0; i < (int)va.size(); i++) arr.Add(va[i]);
+                o.labelTags[path] = string.Join("|", arr);
+            }
+            var srcA = prim.GetAttribute(new TfToken("gameReady:source"));
+            if (srcA.IsValid() && srcA.HasAuthoredValue())
+                o.labelSources[path] = Vt.VtValueToTfToken(srcA.Get(UsdTimeCode.EarliestTime())).GetString();
+            var props = new List<string>();
+            foreach (var flag in new[] { "flammable", "conductive", "magnetic" })
+            {
+                var a = prim.GetAttribute(new TfToken($"gameReady:mat:{flag}"));
+                if (a.IsValid() && a.HasAuthoredValue() && Vt.VtValueTobool(a.Get(UsdTimeCode.EarliestTime())))
+                    props.Add(flag);
+            }
+            var bA = prim.GetAttribute(new TfToken("gameReady:mat:buoyancy"));   // 부력은 float
+            if (bA.IsValid() && bA.HasAuthoredValue() && Vt.VtValueTofloat(bA.Get(UsdTimeCode.EarliestTime())) > 0f)
+                props.Add("buoyant");
+            if (props.Count > 0) o.labelMatProps[path] = string.Join("|", props);
         }
 
         public override void Run()
@@ -77,6 +130,7 @@ namespace USDGameReady
             foreach (var prim in prims)
             {
                 var path = prim.GetPath().ToString();
+                ReadLabels(prim, path, Output);
 
                 var massAttr = prim.GetAttribute(massToken);
                 if (massAttr.IsValid() && massAttr.HasAuthoredValue())
@@ -111,6 +165,14 @@ namespace USDGameReady
                     Output.collisionPaths.Add(path);
                     var typeName = prim.GetTypeName().ToString();
                     Output.colliderShapes[path] = typeName;
+                    // 메시 콜라이더 근사: approximation = "none" 이면 삼각형 메시 그대로 (비볼록)
+                    if (typeName == "Mesh")
+                    {
+                        var apA = prim.GetAttribute(new TfToken("physics:approximation"));
+                        if (apA.IsValid() && apA.HasAuthoredValue() &&
+                            Vt.VtValueToTfToken(apA.Get(UsdTimeCode.EarliestTime())).GetString() == "none")
+                            Output.colliderShapes[path] = "Mesh:none";
+                    }
 
                     // 콜라이더 로컬 오프셋/회전 — 프리미티브 프림은 base 그래프가
                     // GO를 안 만들어 폴백 부착되므로, 여기서 읽어 Create가 복원
@@ -200,6 +262,10 @@ namespace USDGameReady
                         else spec.Append($"{dof}:F;");                             // free
                     }
                     Output.jointD6Specs[path] = spec.ToString();
+                    var drv = new System.Text.StringBuilder();
+                    foreach (var dof in k_Dofs)
+                        drv.Append(ReadDrive(prim, dof, dof));
+                    if (drv.Length > 0) Output.jointDrives[path] = drv.ToString();
 
                     var rr0 = prim.GetRelationship(body0Token);
                     if (rr0.IsValid())
@@ -262,6 +328,12 @@ namespace USDGameReady
                         Output.jointAxes[path] =
                             Vt.VtValueToTfToken(ax.Get(UsdTimeCode.EarliestTime())).GetString();
 
+                    // 타입 조인트 드라이브: 인스턴스 이름이 angular/linear
+                    string axTag = Output.jointAxes.TryGetValue(path, out var axv) ? axv : "X";
+                    bool rev = tn == "PhysicsRevoluteJoint";
+                    var tdrv = ReadDrive(prim, rev ? "angular" : "linear", (rev ? "rot" : "trans") + axTag);
+                    if (tdrv.Length > 0) Output.jointDrives[path] = tdrv;
+
                     float lo = 0, hi = 0;
                     var la = prim.GetAttribute(loToken);
                     if (la.IsValid() && la.HasAuthoredValue()) lo = Vt.VtValueTofloat(la.Get(UsdTimeCode.EarliestTime()));
@@ -272,7 +344,8 @@ namespace USDGameReady
             }
 
             Debug.Log($"[USDGameReady] UsdPhysics filter: bodies={Output.masses.Count}, " +
-                      $"colliders={Output.collisionPaths.Count}, joints={Output.jointTypes.Count}");
+                      $"colliders={Output.collisionPaths.Count}, joints={Output.jointTypes.Count}, " +
+                      $"drives={Output.jointDrives.Count}, labels={Output.labelClasses.Count}");
         }
     }
 }

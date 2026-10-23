@@ -1,4 +1,4 @@
-# GameReady USD Physics Importer
+# GameReady USD Physics Importer and Exporter
 
 A Unity package that teaches the official USD importer (`com.unity.importer.usd`) to read **UsdPhysics**. Mass, center of mass, inertia, collision prims, physics materials and joints authored in a `.usda` file become `Rigidbody`, `Collider`, `PhysicsMaterial` and `ConfigurableJoint` components at import time. No per-asset setup in the editor.
 
@@ -34,15 +34,57 @@ The Unity USD importer processes a file as a node graph: open the stage, convert
 2. `CreateRigidbodyNode` takes the `GameObject` dictionary and those tables and attaches components. The right-handed to left-handed conversion (z flip) is applied once here, including the conjugation of quaternions and the per-axis sign rules for joint limits. Friction and restitution are stored on a serialized `UsdPhysMatInfo` component and applied as a `PhysicsMaterial` on `Awake`, because materials created during import are not kept as prefab sub-assets. If a sibling prim named `render` exists, collider mesh renderers are hidden.
 3. The result goes to the original `BuildHierarchyNode`. Everything else is the stock importer.
 
+### v0.2 additions
+
+- **Exact asymmetric limits.** Unity stores low and high limits separately only on the primary (twist) axis, and one radial linear limit. When a joint has a single moving rotation axis on Y or Z with asymmetric limits, that axis becomes the joint's primary axis. When a joint has a single limited linear axis with asymmetric limits, `connectedAnchor` is shifted by the midpoint so the limit becomes symmetric. Both are exact; no approximation. Toggle with the import setting `GR-Exact Joint Limits` (on by default). The change is recorded on a `GameReadyJointInfo` component so the round-trip dump can report the original USD meaning.
+- **Twist sign.** Measured in PhysX: a USD angle maps to the same Unity twist angle on X and Y, and to the negated angle on Z. v0.1 negated X, which mirrored asymmetric X limits in simulation.
+- **Joint drives.** `PhysicsDriveAPI` (stiffness, damping, target position) becomes `ConfigurableJoint` drives. Angular stiffness and damping are converted from per-degree (UsdPhysics) to per-radian.
+- **Semantic labels.** `gameReady:label:class`, `gameReady:label:tags`, `gameReady:source` and `gameReady:mat:*` become a `GameReadyLabel` component with queries such as `IsA("Asset/Prop/Weapon")`, `HasFunction("openable")` and `IsFlammable`.
+
+### v0.3 additions
+
+- **Exporter.** **GameReady > Export Selection to USD...** and **GameReady > Export Scene to USD...** write a GameReady usda. It applies the importer's conversion in reverse, so a file imported and exported again keeps its values.
+  - Hierarchy and transforms. The z flip and quaternion conjugation are undone.
+  - `Rigidbody` mass, center of mass, inertia and principal axes become `PhysicsMassAPI`. A kinematic body is written as a static body.
+  - Box, Sphere and Capsule colliders become `Cube`, `Sphere` and `Capsule` prims with `purpose = "guide"`. Collider center, size, direction and transform scale are folded into the prim.
+  - `MeshCollider` becomes a Mesh prim with `physics:approximation`: `convexHull` when convex, `none` when not.
+  - Friction and restitution come from the `PhysicsMaterial`, or from `UsdPhysMatInfo`. The layer goes to `gameReady:layer`.
+  - `ConfigurableJoint` becomes a `PhysicsJoint` with per-axis `PhysicsLimitAPI` and `PhysicsDriveAPI`. Moved primary axes and anchor shifts are reversed, and angular stiffness and damping go from per-radian back to per-degree.
+  - Render meshes keep points, normals, UVs and per-submesh `GeomSubset` bindings, with the triangle winding reversed.
+  - Materials become `UsdPreviewSurface`. The importer's `_DiffuseColor` and `_DiffuseColorMap` are read, as are URP and Built-in names. Textures are copied, or read back from the GPU, into a `<name>_textures/` folder next to the file.
+  - `GameReadyLabel` becomes `gameReady:label:*`, `gameReady:source` and `gameReady:mat:*`.
+- **Lossless joints.** The importer now stores the original USD axis spec and a fingerprint of the created joint on `GameReadyJointInfo`. If the joint was not edited in Unity, the exporter writes the original spec back. This includes asymmetric Y and Z limits that Unity cannot hold when two or more rotation axes move.
+- **Non-convex mesh colliders on import.** A Mesh prim with `physics:approximation = "none"` imports as a non-convex `MeshCollider`. Under a dynamic body it stays convex, because Unity requires that.
+- **Batch.** `GameReadyBatch.RunExport -grUsda <in> -grOutUsda <out>` imports a file, places it and exports it again. `GameReadyBatch.RunExportSelfTest -grOutUsda <out>` builds a plain Unity scene in code and exports it.
+
+Exporter limits: only `ConfigurableJoint` is exported, so Hinge, Fixed, Spring and Character joints are skipped with a warning. Terrain and Wheel colliders are skipped. A trigger is written as a normal collider. Custom joint axes are written as `localRot`, which the importer does not read yet. Skinned meshes and animation are not exported.
+
+### Export validation
+
+Checked by comparing world-space values with a script in the main GameReady repository.
+
+| Input | Original vs export | Export vs re-import and export |
+|---|---|---|
+| Round-trip suite (7 bodies, capsules, 3 joints) | equal (rounding up to 1e-8) | equal |
+| Joint check (7 joints, drives, asymmetric limits) | equal (drive rounding up to 3e-7) | equal |
+| Convex decomposition asset (7 convex colliders) | equal | equal |
+| Textured asset (20,000 faces, texture, label) | equal; 22 unused vertices dropped | equal |
+| Plain Unity scene (6 bodies, non-convex mesh, 2 driven joints) | Unity, USD, Unity: equal (rotation 2e-7) | equal |
+
+The exported files pass the OpenUSD validator rules except where the test file itself has no GameReady label.
+
 ## Files
 
 | Path | Role |
 |---|---|
 | `Runtime/UsdPhysMatInfo.cs` | Carries friction and restitution into the prefab |
+| `Runtime/GameReadyLabel.cs` | Semantic labels (class, tags, material properties) for game code |
+| `Runtime/GameReadyJointInfo.cs` | Record of exact limit conversions (primary axis, anchor shift) |
 | `Editor/FilterUsdPhysicsPrimsNode.cs` | UsdPhysics extraction node |
 | `Editor/CreateRigidbodyNode.cs` | Component creation and coordinate conversion |
 | `Editor/USDGameReadyGraphBuilder.cs` | Builds the importer graph from the default one |
 | `Editor/GameReadyUsdPostprocessor.cs` | Assigns the graph on first import |
+| `Editor/GameReadyUsdExporter.cs` | Unity to GameReady usda exporter |
 | `Editor/GameReadyBatch.cs`, `Editor/RoundTripDump.cs` | Batch import and dump tools used for round-trip measurement |
 | `Editor/ImportGraph/usdGameReadyImporter.asset` | The generated graph |
 
@@ -50,7 +92,9 @@ The Unity USD importer processes a file as a node graph: open the stage, convert
 
 - `com.unity.importer.usd` is a pre-release. The node API may change; the dependency version is pinned.
 - Unity convex mesh colliders are limited to 256 faces. Author collision meshes with about 90 vertices or fewer.
-- Unity supports only symmetric limits on the Y and Z angular axes and a single linear limit, so asymmetric USD limits are approximated by the larger absolute value.
+- Asymmetric limits are exact only when one rotation axis or one linear axis moves. With two or more moving rotation axes, asymmetric Y and Z limits are approximated by the larger absolute value, and several limited linear axes share one radial limit.
+- Unity shares one drive between the Y and Z swing axes. Different Y and Z drives use the stiffer one.
+- Joint frame rotations (`localRot0`, `localRot1`) are not read yet. The exporter writes them.
 - Unity only. The Godot and Unreal adapters live in the main GameReady repository.
 
 ## Validation
@@ -65,6 +109,6 @@ MIT. See `LICENSE`.
 
 ## 한국어 요약
 
-Unity 공식 USD 임포터의 노드 그래프에 물리 노드 두 개를 끼워 넣는 패키지입니다. usda 안의 UsdPhysics 값을 읽어 Rigidbody, 콜라이더, 물리 재질, 조인트를 임포트 시점에 자동으로 붙입니다. 내장 임포터는 UsdPhysics를 해석하지 않으므로 이 패키지가 없으면 메시와 텍스처만 들어옵니다.
+Unity 공식 USD 임포터의 노드 그래프에 물리 노드 두 개를 끼워 넣는 패키지입니다. v0.3부터 반대 방향인 내보내기도 들어 있습니다. 메뉴 GameReady > Export Selection to USD... 또는 Export Scene to USD...로 씬을 GameReady usda로 저장합니다. 임포터 변환을 거꾸로 적용하므로 임포트했다가 다시 내보내면 물리값, 라벨, 메시가 보존됩니다. usda 안의 UsdPhysics 값을 읽어 Rigidbody, 콜라이더, 물리 재질, 조인트를 임포트 시점에 자동으로 붙입니다. 내장 임포터는 UsdPhysics를 해석하지 않으므로 이 패키지가 없으면 메시와 텍스처만 들어옵니다.
 
 설치는 `Packages/manifest.json`에 위 git 주소 한 줄을 추가하면 됩니다. 이후 usda 파일을 Assets 아래에 넣으면 첫 임포트 때 그래프가 자동 지정됩니다.

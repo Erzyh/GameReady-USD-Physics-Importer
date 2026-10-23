@@ -218,7 +218,19 @@ public static class RoundTripDump
         sb.Append($"      \"lowAngularXLimit\": {F(j.lowAngularXLimit.limit)},\n");
         sb.Append($"      \"highAngularXLimit\": {F(j.highAngularXLimit.limit)},\n");
         sb.Append($"      \"angularYLimit\": {F(j.angularYLimit.limit)},\n");
-        sb.Append($"      \"angularZLimit\": {F(j.angularZLimit.limit)}\n");
+        sb.Append($"      \"angularZLimit\": {F(j.angularZLimit.limit)},\n");
+        // v0.2 임포터: twist 한계를 USD 각 부호 그대로 저장 (측정기가 구버전 덤프와 구분)
+        sb.Append("      \"twistConvention\": \"usd\"");
+        // 정확 변환 기록: 주축으로 옮긴 USD 축, connectedAnchor에 더한 이동량 (측정기가 USD 의미로 복원)
+        foreach (var info in j.GetComponents<USDGameReady.GameReadyJointInfo>())
+        {
+            if (info.joint != j) continue;
+            if (!string.IsNullOrEmpty(info.primaryDof))
+                sb.Append($",\n      \"gameReadyPrimary\": \"{info.primaryDof}\"");
+            if (info.anchorShift != Vector3.zero)
+                sb.Append($",\n      \"gameReadyAnchorShift\": {V3(info.anchorShift)}");
+        }
+        sb.Append("\n");
         sb.Append("    }");
     }
 }
