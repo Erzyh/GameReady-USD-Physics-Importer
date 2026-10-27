@@ -24,7 +24,7 @@ After the editor compiles, the importer graph `Editor/ImportGraph/usdGameReadyIm
 
 ## Use
 
-Drop a `.usda` under `Assets`. On first import, a file whose header contains `physics:mass` or `gameReady` is assigned this package's graph and marked as a USD root automatically. Files whose graph reference is broken (for example after the graph asset moved) are repaired the same way. Files that already have a valid graph and files without physics are left untouched. Toggle this with **GameReady > Auto-assign Importer Graph**, or pick the graph by hand in the Inspector of any `.usda`.
+Drop a `.usda` under `Assets`. On first import, a file whose header contains `physics:mass` or `gameReady` is assigned this package's graph and marked as a USD root automatically. Files whose graph reference is broken (for example after the graph asset moved) are repaired the same way. A root file next to `payloads/Physics/physics.usda` (the NVIDIA SimReady layout) is assigned the graph too, and layers inside `payloads/` are skipped. For SimReady, copy the whole `simready_usd` folder under `Assets`. Files that already have a valid graph and files without physics are left untouched. Toggle this with **GameReady > Auto-assign Importer Graph**, or pick the graph by hand in the Inspector of any `.usda`.
 
 ## How it works
 
@@ -57,11 +57,39 @@ The Unity USD importer processes a file as a node graph: open the stage, convert
 - **Non-convex mesh colliders on import.** A Mesh prim with `physics:approximation = "none"` imports as a non-convex `MeshCollider`. Under a dynamic body it stays convex, because Unity requires that.
 - **Batch.** `GameReadyBatch.RunExport -grUsda <in> -grOutUsda <out>` imports a file, places it and exports it again. `GameReadyBatch.RunExportSelfTest -grOutUsda <out>` builds a plain Unity scene in code and exports it.
 
-Exporter limits: only `ConfigurableJoint` is exported, so Hinge, Fixed, Spring and Character joints are skipped with a warning. Terrain and Wheel colliders are skipped. A trigger is written as a normal collider. Custom joint axes are written as `localRot`, which the importer does not read yet. Skinned meshes and animation are not exported.
+Exporter limits: only `ConfigurableJoint` is exported, so Hinge, Fixed, Spring and Character joints are skipped with a warning. Terrain and Wheel colliders are skipped. A trigger is written as a normal collider. Custom joint axes are written as `localRot`, which the importer reads from v0.4. Skinned meshes and animation are not exported.
+
+### v0.4 additions: UsdPhysics files from other tools (NVIDIA SimReady)
+
+GameReady files put mass on the body prim and are Y-up. Other UsdPhysics files often do not. v0.4 reads them as the UsdPhysics spec defines.
+
+- **Z-up stages.** Physics values are first rotated into the Y-up convention, then the usual z flip is applied. The two steps together equal the stock importer's Y and Z swap for meshes and transforms, and the measured joint sign rules still hold because the first step is a proper rotation.
+- **Bodies are `PhysicsRigidBodyAPI` prims.** Mass, center of mass and inertia written on collider prims under a body are combined into that body: total mass, mass-weighted center of mass, and the inertia tensors moved to the common center (parallel axis theorem) and diagonalized again. A body with mass on the body prim uses that value, as the spec says. A body with no mass anywhere gets its mass from the bound physics material's `physics:density` (1000 kg/m³ if none) and the collider volume.
+- **Colliders are `PhysicsCollisionAPI` prims.** `physics:collisionEnabled` no longer has to be authored.
+- **Physics materials through `material:binding:physics`.** Friction and restitution are read from the bound material when the collider prim has none of its own.
+- **Joint targets below the body.** When `physics:body0` or `physics:body1` points at a prim under the body (for example the collision mesh), the joint goes to the nearest body and `localPos` and `localRot` are moved into that body's frame.
+- **Joint frames.** `localRot1` sets the joint axes on body 1, and `localRot0` turns the anchor shift into body 0's frame.
+- **Fixed joints** become a `ConfigurableJoint` with every axis locked. Missing or infinite revolute and prismatic limits mean a free axis.
+- **Kinematic bodies.** `physics:kinematicEnabled` sets `Rigidbody.isKinematic`.
+- **Multi-layer assets.** Layers under a `payloads/` folder are not treated as roots. A root that sits next to `payloads/Physics/physics.usda` gets the GameReady graph even when it is a binary crate file. `GameReadyBatch` copies the `payloads/` tree with the root.
+
+### SimReady import validation
+
+38 NVIDIA SimReady assets, one or more from each of 31 categories (furniture, carts, cabinets, ladders, tools, kitchenware, boxes, bins, lamps and more), were imported and compared with values computed independently by `usd-core` (`unity_tools/checks/compare_simready_import.py`).
+
+| | Result |
+|---|---|
+| Bodies, colliders, joints | 197/197, 195/195, 159/159 |
+| Mass, center of mass, inertia tensor | relative error up to 6e-8, 4e-8 m, 6e-7 |
+| Joint axes | all match (abs dot product 1.0) |
+| Joint anchors | within 1 µm, except 7 joints whose two anchors are already apart in the source file (largest 161 mm, a fixed joint in a hospital bed). The importer keeps the source values. |
+| SimReady to Unity to GameReady usda to Unity (4 assets) | bodies, joints and limits unchanged, positions within 1.6e-6 m |
+
+Before v0.4 the same files imported with bodies in the wrong place, because mass sat on the collision meshes.
 
 ### Export validation
 
-Checked by comparing world-space values with a script in the main GameReady repository.
+Checked with `unity_tools/checks/compare_usd_export.py`, which compares world-space values.
 
 | Input | Original vs export | Export vs re-import and export |
 |---|---|---|
@@ -94,7 +122,9 @@ The exported files pass the OpenUSD validator rules except where the test file i
 - Unity convex mesh colliders are limited to 256 faces. Author collision meshes with about 90 vertices or fewer.
 - Asymmetric limits are exact only when one rotation axis or one linear axis moves. With two or more moving rotation axes, asymmetric Y and Z limits are approximated by the larger absolute value, and several limited linear axes share one radial limit.
 - Unity shares one drive between the Y and Z swing axes. Different Y and Z drives use the stiffer one.
-- Joint frame rotations (`localRot0`, `localRot1`) are not read yet. The exporter writes them.
+- Unity builds the connected body's joint frame from the pose at creation, so `localRot0` is used only for the anchor shift. Files whose two joint frames disagree in the rest pose import with body 1's frame.
+- `sdf` and `convexDecomposition` mesh colliders under a moving body become one convex hull, because Unity has neither. SimReady uses `sdf` everywhere, so concave parts (a bin's opening, a cart's frame) become solid in Unity.
+- `metersPerUnit` other than 1 is not applied to physics lengths. A warning is logged.
 - Unity only. The Godot and Unreal adapters live in the main GameReady repository.
 
 ## Validation
@@ -108,6 +138,23 @@ MIT. See `LICENSE`.
 ---
 
 ## 한국어 요약
+
+**v0.4**: NVIDIA SimReady처럼 다른 도구가 만든 UsdPhysics 파일도 읽습니다. 처리하는 항목은 다음과 같습니다.
+
+- Z-up 좌표계
+- 충돌 메시에 나뉘어 적힌 질량 (강체별로 합산)
+- 질량이 없는 강체 (물리 재질 밀도로 계산)
+- `material:binding:physics`로 연결된 마찰과 반발
+- 강체 아래 메시를 가리키는 조인트
+- 조인트 틀 (`localRot`)
+- Fixed 조인트와 무한대 한계
+
+SimReady 31개 범주 38개로 검증했습니다.
+- 강체 197개, 조인트 159개가 모두 들어옵니다.
+- 질량, 무게중심, 관성 오차는 최대 6e-7입니다.
+- 조인트 축은 전부 일치합니다.
+
+SimReady의 `sdf` 메시 콜라이더는 Unity에 대응하는 콜라이더가 없어 볼록 껍질이 됩니다.
 
 Unity 공식 USD 임포터의 노드 그래프에 물리 노드 두 개를 끼워 넣는 패키지입니다. v0.3부터 반대 방향인 내보내기도 들어 있습니다. 메뉴 GameReady > Export Selection to USD... 또는 Export Scene to USD...로 씬을 GameReady usda로 저장합니다. 임포터 변환을 거꾸로 적용하므로 임포트했다가 다시 내보내면 물리값, 라벨, 메시가 보존됩니다. usda 안의 UsdPhysics 값을 읽어 Rigidbody, 콜라이더, 물리 재질, 조인트를 임포트 시점에 자동으로 붙입니다. 내장 임포터는 UsdPhysics를 해석하지 않으므로 이 패키지가 없으면 메시와 텍스처만 들어옵니다.
 

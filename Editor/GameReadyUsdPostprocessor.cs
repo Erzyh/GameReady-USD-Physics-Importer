@@ -9,6 +9,7 @@ namespace USDGameReady.Editor
     /// <summary>
     /// GameReady usda가 프로젝트에 들어올 때 임포터 그래프를 자동으로 지정한다.
     /// 판정: 파일 앞부분에 physics:mass 또는 gameReady 문자열이 있으면 GameReady 에셋으로 본다.
+    /// SimReady처럼 payloads/Physics/physics.usda 를 둔 루트도 포함하고, payloads/ 아래 레이어는 제외한다.
     /// 처음 임포트되거나 그래프 참조가 깨진 파일만 그래프를 우리 것으로 바꾸고 isUsdRoot를 켠다. 그래프가 살아 있는 파일과 나머지 usd 파일은 손대지 않는다.
     /// 메뉴 GameReady/Auto-assign Importer Graph 로 끄고 켤 수 있다.
     /// </summary>
@@ -57,6 +58,12 @@ namespace USDGameReady.Editor
 
         static bool LooksGameReady(string path)
         {
+            // SimReady 같은 다중 레이어 에셋: payloads/ 아래 레이어는 루트가 아니다
+            var norm = path.Replace('\\', '/');
+            if (norm.Contains("/payloads/")) return false;
+            // 루트가 바이너리(usdc)라 앞부분에 글자가 없을 때: 옆에 물리 페이로드가 있으면 GameReady로 연다
+            var dir = Path.GetDirectoryName(path) ?? "";
+            if (File.Exists(Path.Combine(dir, "payloads", "Physics", "physics.usda"))) return true;
             try
             {
                 using var sr = new StreamReader(path);

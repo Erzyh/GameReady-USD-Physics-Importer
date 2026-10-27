@@ -47,6 +47,10 @@ namespace USDGameReady
             public Dictionary<string, string> labelTags;
             public Dictionary<string, string> labelMatProps;
             public Dictionary<string, string> labelSources;
+            public Dictionary<string, float> densities;
+            public HashSet<string> kinematicBodies;
+            public Dictionary<string, Quaternion> jointLocalRot0;
+            public Dictionary<string, Quaternion> jointLocalRot1;
             public bool enabled = true;
             public bool exactLimits = true;
         }
@@ -57,7 +61,7 @@ namespace USDGameReady
         }
 
         // rel 타깃이 상대경로("../frame")로 올 수 있어 조인트 prim 기준으로 절대화
-        static string ResolvePath(string jointPath, string target)
+        internal static string ResolvePath(string jointPath, string target)
         {
             if (string.IsNullOrEmpty(target)) return null;
             if (target.StartsWith("/")) return target;
@@ -153,9 +157,8 @@ namespace USDGameReady
                             mc.sharedMesh = mf.sharedMesh;
                             // approximation "none" = 비볼록 삼각형 메시. 단 움직이는 강체 아래면 Unity 제약상 볼록
                             bool dynamicAncestor = false;
-                            if (Input.masses != null)
-                                foreach (var bk in Input.masses.Keys)
-                                    if (path == bk || path.StartsWith(bk + "/")) { dynamicAncestor = true; break; }
+                            foreach (var bk in BodyKeys())
+                                if (path == bk || path.StartsWith(bk + "/")) { dynamicAncestor = true; break; }
                             mc.convex = !(shape == "Mesh:none" && !dynamicAncestor);
                             col = mc;
                         }
@@ -211,6 +214,23 @@ namespace USDGameReady
                             Input.principalAxes.TryGetValue(kvp.Key, out var rot))
                             rb.inertiaTensorRotation = XfQuat(rot);   // ← 켤레 변환 적용
                     }
+                    if (Input.kinematicBodies != null && Input.kinematicBodies.Contains(kvp.Key))
+                        rb.isKinematic = true;
+                    nb++;
+                }
+            }
+
+            // 질량이 어디에도 없는 강체: 물리 재질 밀도와 콜라이더 부피로 질량 (UsdPhysics 규약)
+            if (Input.densities != null)
+            {
+                foreach (var kvp in Input.densities)
+                {
+                    if (!Input.gameObjects.TryGetValue(kvp.Key, out var go)) continue;
+                    var rb = go.GetComponent<Rigidbody>();
+                    if (rb == null) rb = go.AddComponent<Rigidbody>();
+                    rb.SetDensity(kvp.Value);
+                    if (Input.kinematicBodies != null && Input.kinematicBodies.Contains(kvp.Key))
+                        rb.isKinematic = true;
                     nb++;
                 }
             }
@@ -255,7 +275,11 @@ namespace USDGameReady
                     if (Input.jointLocalPos0 != null) Input.jointLocalPos0.TryGetValue(path, out lp0);
                     if (Input.jointLocalPos1 != null) Input.jointLocalPos1.TryGetValue(path, out lp1);
                     j.anchor = XfVec(lp1);
-                    j.connectedAnchor = XfVec(lp0 + shiftUsd);
+                    // 조인트 틀 (localRot). 앵커 이동량은 조인트 좌표라 body0 틀로 돌려서 더한다
+                    Quaternion fr0 = Quaternion.identity, fr1 = Quaternion.identity;
+                    if (Input.jointLocalRot0 != null && Input.jointLocalRot0.TryGetValue(path, out var q0)) fr0 = q0;
+                    if (Input.jointLocalRot1 != null && Input.jointLocalRot1.TryGetValue(path, out var q1)) fr1 = q1;
+                    j.connectedAnchor = XfVec(lp0 + fr0 * shiftUsd);
 
                     j.xMotion = ConfigurableJointMotion.Locked;
                     j.yMotion = ConfigurableJointMotion.Locked;
@@ -264,10 +288,13 @@ namespace USDGameReady
                     j.angularYMotion = ConfigurableJointMotion.Locked;
                     j.angularZMotion = ConfigurableJointMotion.Locked;
 
-                    if (primary == "rotY")
-                    { j.axis = Vector3.up; j.secondaryAxis = Vector3.right; }
-                    else if (primary == "rotZ")
-                    { j.axis = Vector3.forward; j.secondaryAxis = Vector3.up; }
+                    // 조인트 좌표의 주축/보조축을 body1 틀로 옮긴다 (localRot1, Unity 좌표 켤레)
+                    Vector3 ax1 = Vector3.right, ax2 = Vector3.up;
+                    if (primary == "rotY") { ax1 = Vector3.up; ax2 = Vector3.right; }
+                    else if (primary == "rotZ") { ax1 = Vector3.forward; ax2 = Vector3.up; }
+                    var fu = XfQuat(fr1);
+                    j.axis = fu * ax1;
+                    j.secondaryAxis = fu * ax2;
 
                     // 3) 한계
                     foreach (var dof in k_Dofs)
@@ -333,6 +360,12 @@ namespace USDGameReady
                       $"exact={nExact}, drives={nDrive}, labels={nl}");
         }
 
+        IEnumerable<string> BodyKeys()
+        {
+            if (Input.masses != null) foreach (var k in Input.masses.Keys) yield return k;
+            if (Input.densities != null) foreach (var k in Input.densities.Keys) yield return k;
+        }
+
         // ---------------- 조인트 사양 ----------------
 
         static readonly string[] k_Dofs = { "transX", "transY", "transZ", "rotX", "rotY", "rotZ" };
@@ -374,11 +407,14 @@ namespace USDGameReady
                 }
                 return dofs;
             }
+            if (type == "Fixed") return dofs;                       // 모두 잠금
             string axis = "X";
             if (Input.jointAxes != null) Input.jointAxes.TryGetValue(path, out axis);
             Vector2 lim = Vector2.zero;
             if (Input.jointLimits != null) Input.jointLimits.TryGetValue(path, out lim);
             var s1 = dofs[(type == "Revolute" ? "rot" : "trans") + axis];
+            // 한계가 없거나 무한대(필터가 NaN으로 넘김)면 자유
+            if (float.IsNaN(lim.x) || float.IsNaN(lim.y)) { s1.motion = 'F'; return dofs; }
             s1.motion = 'M'; s1.lo = lim.x; s1.hi = lim.y;
             return dofs;
         }

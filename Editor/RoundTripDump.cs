@@ -96,6 +96,8 @@ public static class RoundTripDump
         sb.Append($"      \"asset\": \"{AssetName(t)}\",\n");
         sb.Append($"      \"name\": \"{t.name}\",\n");
         sb.Append($"      \"position\": {V3(t.localPosition)},\n");
+        sb.Append($"      \"worldPosition\": {V3(t.position)},\n");
+        sb.Append($"      \"worldRotation_wxyz\": {QWXYZ(t.rotation)},\n");
         sb.Append($"      \"rotation_wxyz\": {QWXYZ(t.localRotation)},\n");
         sb.Append($"      \"isKinematic\": {(rb.isKinematic ? "true" : "false")},\n");
         sb.Append($"      \"mass\": {F(rb.mass)},\n");
@@ -198,6 +200,13 @@ public static class RoundTripDump
 
     static string Motion(ConfigurableJointMotion m) => m.ToString(); // Locked/Limited/Free
 
+    static string UsdPathOf(ConfigurableJoint j)
+    {
+        foreach (var info in j.GetComponents<USDGameReady.GameReadyJointInfo>())
+            if (info.joint == j) return info.usdPath;
+        return "";
+    }
+
     static void AppendJoint(StringBuilder sb, ConfigurableJoint j)
     {
         var t = j.transform;
@@ -220,6 +229,14 @@ public static class RoundTripDump
         sb.Append($"      \"angularYLimit\": {F(j.angularYLimit.limit)},\n");
         sb.Append($"      \"angularZLimit\": {F(j.angularZLimit.limit)},\n");
         // v0.2 임포터: twist 한계를 USD 각 부호 그대로 저장 (측정기가 구버전 덤프와 구분)
+        // 월드 기준 (외부 UsdPhysics 검증용: 두 몸의 앵커가 한 점인지, 축 방향)
+        var wa = t.TransformPoint(j.anchor);
+        var wc = j.connectedBody ? j.connectedBody.transform.TransformPoint(j.connectedAnchor) : j.connectedAnchor;
+        sb.Append($"      \"worldAnchor\": {V3(wa)},\n");
+        sb.Append($"      \"worldConnectedAnchor\": {V3(wc)},\n");
+        sb.Append($"      \"worldAxis\": {V3(t.TransformDirection(j.axis).normalized)},\n");
+        sb.Append($"      \"worldSecondaryAxis\": {V3(t.TransformDirection(j.secondaryAxis).normalized)},\n");
+        sb.Append($"      \"usdPath\": \"{UsdPathOf(j)}\",\n");
         sb.Append("      \"twistConvention\": \"usd\"");
         // 정확 변환 기록: 주축으로 옮긴 USD 축, connectedAnchor에 더한 이동량 (측정기가 USD 의미로 복원)
         foreach (var info in j.GetComponents<USDGameReady.GameReadyJointInfo>())

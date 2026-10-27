@@ -131,8 +131,8 @@ MonoBehaviour:
   - rid: 4800488168235728951
   - rid: 4800488168235728952
   - rid: 4800488168235728953
-  - rid: 5112242667811766272
-  - rid: 5112242667811766273
+  - rid: 2260222695143374848
+  - rid: 2260222695143374849
   m_Edges:
   - origin:
       targetedPortSet: 1
@@ -2113,7 +2113,7 @@ MonoBehaviour:
       targetedPortSet: 0
       fieldName: gameObjects
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: stage
@@ -2123,282 +2123,322 @@ MonoBehaviour:
       targetedPortSet: 0
       fieldName: stage
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
   - origin:
       targetedPortSet: 1
       fieldName: masses
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: masses
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: centersOfMass
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: centersOfMass
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: inertiaDiagonals
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: inertiaDiagonals
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: principalAxes
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: principalAxes
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: collisionPaths
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: collisionPaths
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: colliderShapes
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: colliderShapes
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: colliderBoxSizes
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: colliderBoxSizes
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: colliderRadii
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: colliderRadii
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: colliderCenters
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: colliderCenters
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: colliderRotations
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: colliderRotations
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: materials
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: materials
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: layers
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: layers
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointTypes
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointTypes
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointBody0
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointBody0
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointBody1
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointBody1
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointLocalPos0
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointLocalPos0
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointLocalPos1
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointLocalPos1
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointAxes
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointAxes
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointLimits
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointLimits
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: colliderCapsuleHeights
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: colliderCapsuleHeights
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: colliderCapsuleAxes
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: colliderCapsuleAxes
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointD6Specs
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointD6Specs
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: jointDrives
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: jointDrives
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: labelClasses
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: labelClasses
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: labelTags
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: labelTags
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: labelMatProps
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: labelMatProps
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: labelSources
       node:
-        rid: 5112242667811766272
+        rid: 2260222695143374848
     destination:
       targetedPortSet: 0
       fieldName: labelSources
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
+  - origin:
+      targetedPortSet: 1
+      fieldName: densities
+      node:
+        rid: 2260222695143374848
+    destination:
+      targetedPortSet: 0
+      fieldName: densities
+      node:
+        rid: 2260222695143374849
+  - origin:
+      targetedPortSet: 1
+      fieldName: kinematicBodies
+      node:
+        rid: 2260222695143374848
+    destination:
+      targetedPortSet: 0
+      fieldName: kinematicBodies
+      node:
+        rid: 2260222695143374849
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointLocalRot0
+      node:
+        rid: 2260222695143374848
+    destination:
+      targetedPortSet: 0
+      fieldName: jointLocalRot0
+      node:
+        rid: 2260222695143374849
+  - origin:
+      targetedPortSet: 1
+      fieldName: jointLocalRot1
+      node:
+        rid: 2260222695143374848
+    destination:
+      targetedPortSet: 0
+      fieldName: jointLocalRot1
+      node:
+        rid: 2260222695143374849
   - origin:
       targetedPortSet: 1
       fieldName: gameObjects
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
     destination:
       targetedPortSet: 0
       fieldName: gameObjects
@@ -3569,13 +3609,13 @@ MonoBehaviour:
       targetedPortSet: 0
       fieldName: enabled
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   - id: GR-Exact Joint Limits
     destination:
       targetedPortSet: 0
       fieldName: exactLimits
       node:
-        rid: 5112242667811766273
+        rid: 2260222695143374849
   m_ImportSettings:
   - rid: 4800488168235728954
   - rid: 4800488168235728955
@@ -3599,8 +3639,8 @@ MonoBehaviour:
   - rid: 4800488168235728973
   - rid: 4800488168235728974
   - rid: 4800488168235728975
-  - rid: 5112242667811766274
-  - rid: 5112242667811766275
+  - rid: 2260222695143374850
+  - rid: 2260222695143374851
   m_ImportConstants:
   - rid: 4800488168235728976
   - rid: 4800488168235728977
@@ -3667,6 +3707,24 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 2260222695143374848
+      type: {class: FilterUsdPhysicsPrimsNode, ns: USDGameReady, asm: EGLab.GameReady.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 2260222695143374849
+      type: {class: CreateRigidbodyNode, ns: USDGameReady, asm: EGLab.GameReady.USD.Editor}
+      data:
+        temporaryField: 0
+    - rid: 2260222695143374850
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: GR-Enable UsdPhysics
+        value: 1
+    - rid: 2260222695143374851
+      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
+      data:
+        id: GR-Exact Joint Limits
+        value: 1
     - rid: 4800488168154203076
       type: {class: UsdStageOpenNode, ns: Unity.Importer.USD, asm: Unity.Importer.USD}
       data:
@@ -4955,21 +5013,3 @@ MonoBehaviour:
           fieldName: schemaName
           node:
             rid: 4800488168235728949
-    - rid: 5112242667811766272
-      type: {class: FilterUsdPhysicsPrimsNode, ns: USDGameReady, asm: EGLab.GameReady.USD.Editor}
-      data:
-        temporaryField: 0
-    - rid: 5112242667811766273
-      type: {class: CreateRigidbodyNode, ns: USDGameReady, asm: EGLab.GameReady.USD.Editor}
-      data:
-        temporaryField: 0
-    - rid: 5112242667811766274
-      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
-      data:
-        id: GR-Enable UsdPhysics
-        value: 1
-    - rid: 5112242667811766275
-      type: {class: 'ImportSetting`1[[System.Boolean, mscorlib]]', ns: UnityEngine.Importer, asm: Unity.Importer}
-      data:
-        id: GR-Exact Joint Limits
-        value: 1

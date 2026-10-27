@@ -3,6 +3,7 @@
 // 사용법 (Unity 닫힌 상태에서):
 //   Unity.exe -batchmode -projectPath <프로젝트> -executeMethod GameReadyBatch.Run
 //             -grUsda <입력.usda> -grOut <출력.json> -logFile <로그> -quit
+//   SimReady 같은 다중 레이어 에셋은 -grUsda 에 루트 usd를 주면 옆의 payloads/ 를 같이 복사한다.
 //   내보내기 왕복: -executeMethod GameReadyBatch.RunExport -grUsda <입력.usda> -grOutUsda <출력.usda> [-grOut <덤프.json>]
 // 패키지 com.eglab.gameready.usd 에 포함.
 // ------------------------------------------------------------------
@@ -184,6 +185,9 @@ public static class GameReadyBatch
             foreach (var png in Directory.GetFiles(
                          Path.GetDirectoryName(usda), "*.png"))
                 File.Copy(png, dstDir + "/" + Path.GetFileName(png), true);
+            // 다중 레이어 에셋(NVIDIA SimReady): 루트 옆 payloads/ 트리를 통째로 복사
+            var payloads = Path.Combine(Path.GetDirectoryName(usda), "payloads");
+            if (Directory.Exists(payloads)) CopyTree(payloads, dstDir + "/payloads");
             // 내보내기가 만든 <이름>_textures/ 폴더도 같이 복사 (상대 경로 유지)
             foreach (var td in Directory.GetDirectories(Path.GetDirectoryName(usda), "*_textures"))
             {
@@ -249,6 +253,15 @@ public static class GameReadyBatch
                 throw new Exception("임포트 결과에서 GameObject를 찾지 못함: " + dst);
             return (GameObject)PrefabUtility.InstantiatePrefab(main);
 
+    }
+
+    static void CopyTree(string src, string dst)
+    {
+        Directory.CreateDirectory(dst);
+        foreach (var f in Directory.GetFiles(src))
+            File.Copy(f, Path.Combine(dst, Path.GetFileName(f)), true);
+        foreach (var d in Directory.GetDirectories(src))
+            CopyTree(d, Path.Combine(dst, Path.GetFileName(d)));
     }
 
     static string Arg(string[] a, string k)

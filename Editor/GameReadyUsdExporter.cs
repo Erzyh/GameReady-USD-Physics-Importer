@@ -593,6 +593,14 @@ namespace USDGameReady.Editor
 
         class Dof { public char motion = 'L'; public float lo, hi; public bool drive; public float k, c, t; }
 
+        // 주축 a, 보조축 s 로 정한 오른손 틀 (x=a, y=s의 직교 성분)
+        static Quaternion AxesFrame(Vector3 a, Vector3 s)
+        {
+            var z = Vector3.Cross(a.normalized, s.normalized).normalized;
+            var y = Vector3.Cross(z, a.normalized).normalized;
+            return Quaternion.LookRotation(z, y);
+        }
+
         static void WriteJoint(Ctx ctx, ConfigurableJoint j)
         {
             var go1 = j.gameObject;
@@ -608,19 +616,13 @@ namespace USDGameReady.Editor
             string primary = info != null ? info.primaryDof ?? "" : "";
             Vector3 shiftUsd = info != null ? XfVec(info.anchorShift) : Vector3.zero;
 
-            // 조인트 프레임: 임포터가 정한 축(기본, 주축 재지정)이면 USD 프레임은 항등
-            Vector3 ax = j.axis.normalized, sec = j.secondaryAxis.normalized;
-            bool defaultFrame = (ax - Vector3.right).sqrMagnitude < 1e-6f && (sec - Vector3.up).sqrMagnitude < 1e-6f;
-            bool primaryFrame = (primary == "rotY" && (ax - Vector3.up).sqrMagnitude < 1e-6f) ||
-                                (primary == "rotZ" && (ax - Vector3.forward).sqrMagnitude < 1e-6f);
-            Quaternion frameU = Quaternion.identity;
-            if (!defaultFrame && !primaryFrame)
-            {
-                var z = Vector3.Cross(ax, sec).normalized;
-                var y = Vector3.Cross(z, ax).normalized;
-                frameU = Quaternion.LookRotation(z, y);
-                ctx.rep.warnings.Add($"{go1.name}: 사용자 지정 조인트 축은 localRot으로 기록합니다 (임포터는 localRot을 아직 읽지 않음)");
-            }
+            // 조인트 프레임 (임포터의 역): j.axis = F * 주축, j.secondaryAxis = F * 보조축.
+            // 주축 재지정분을 걷어낸 F가 USD localRot1 (Unity 좌표). 기본 축이면 항등
+            Vector3 b1 = Vector3.right, b2 = Vector3.up;
+            if (primary == "rotY") { b1 = Vector3.up; b2 = Vector3.right; }
+            else if (primary == "rotZ") { b1 = Vector3.forward; b2 = Vector3.up; }
+            Quaternion frameU = AxesFrame(j.axis, j.secondaryAxis) * Quaternion.Inverse(AxesFrame(b1, b2));
+            if (Quaternion.Angle(frameU, Quaternion.identity) < 1e-3f) frameU = Quaternion.identity;
 
             var d = new Dictionary<string, Dof>();
             foreach (var k in k_Dofs) d[k] = new Dof();
@@ -695,11 +697,12 @@ namespace USDGameReady.Editor
             if (p0 != null) jp.attrs.Add($"rel physics:body0 = <{p0.Path}>");
             jp.attrs.Add($"rel physics:body1 = <{p1.Path}>");
 
-            Vector3 lp0 = XfVec(j.connectedAnchor) - shiftUsd;
-            Vector3 lp1 = XfVec(j.anchor);
             var r1 = go1.transform.rotation;
             var r0 = j.connectedBody != null ? j.connectedBody.transform.rotation : Quaternion.identity;
             var rot0U = Quaternion.Inverse(r0) * r1 * frameU;
+            // 앵커 이동량은 조인트 좌표 -> body0 틀로 돌려서 뺀다 (임포터와 같은 규칙)
+            Vector3 lp0 = XfVec(j.connectedAnchor) - XfQuat(rot0U) * shiftUsd;
+            Vector3 lp1 = XfVec(j.anchor);
             jp.attrs.Add($"point3f physics:localPos0 = {V(lp0)}");
             jp.attrs.Add($"quatf physics:localRot0 = {Q(XfQuat(rot0U))}");
             jp.attrs.Add($"point3f physics:localPos1 = {V(lp1)}");

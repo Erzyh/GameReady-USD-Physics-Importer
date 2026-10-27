@@ -169,6 +169,19 @@ namespace USDGameReady.Editor
                 createRigidbodyNode, nameof(CreateRigidbodyNode.Input.labelSources)));
 
             graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.densities),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.densities)));
+            graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.kinematicBodies),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.kinematicBodies)));
+            graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.jointLocalRot0),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.jointLocalRot0)));
+            graph.AddEdge(new Edge(
+                filterPhysicsNode,   nameof(FilterUsdPhysicsPrimsNode.Output.jointLocalRot1),
+                createRigidbodyNode, nameof(CreateRigidbodyNode.Input.jointLocalRot1)));
+
+            graph.AddEdge(new Edge(
                 createRigidbodyNode, nameof(CreateRigidbodyNode.Output.gameObjects),
                 buildHierarchyNode,  nameof(BuildHierarchyNode.Input.gameObjects)));
 

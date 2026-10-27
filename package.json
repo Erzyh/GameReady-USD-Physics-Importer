@@ -1,8 +1,8 @@
 {
   "name": "com.eglab.gameready.usd",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "displayName": "GameReady USD Physics Importer and Exporter",
-  "description": "Extends the Unity USD importer graph so UsdPhysics (mass, center of mass, inertia, colliders, physics materials, joints, joint drives) becomes Rigidbody, Collider, PhysicsMaterial and ConfigurableJoint components at import time, with exact asymmetric joint limits and GameReady semantic labels. Exports Unity scenes back to GameReady usda (UsdPhysics, meshes, UsdPreviewSurface materials, labels).",
+  "description": "Extends the Unity USD importer graph so UsdPhysics (mass, center of mass, inertia, colliders, physics materials, joints, joint drives) becomes Rigidbody, Collider, PhysicsMaterial and ConfigurableJoint components at import time, with exact asymmetric joint limits and GameReady semantic labels. Also reads UsdPhysics files from other tools such as NVIDIA SimReady (Z-up stages, mass on collider prims, bound physics materials, joint frames, fixed joints). Exports Unity scenes back to GameReady usda (UsdPhysics, meshes, UsdPreviewSurface materials, labels).",
   "unity": "6000.0",
   "dependencies": {
     "com.unity.importer.usd": "1.0.0-pre.2"
@@ -21,6 +21,7 @@
     "importer",
     "physics",
     "gameready",
-    "exporter"
+    "exporter",
+    "simready"
   ]
 }
